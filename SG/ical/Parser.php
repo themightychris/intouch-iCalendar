@@ -1,6 +1,8 @@
 <?php // BUILD: Remove line
 
-class SG_iCal_Parser {
+namespace sg\ical;
+
+class Parser {
 	/**
 	 * Fetches $url and passes it on to be parsed
 	 * @param string $url
@@ -15,7 +17,7 @@ class SG_iCal_Parser {
 	/**
 	 * Passes a text string on to be parsed
 	 * @param string $content
-	 * @param SG_iCal $ical
+	 * @param sg\ical\iCal $ical
 	 */
 	public static function ParseString($content, SG_iCal $ical ) {
 		$content = self::UnfoldLines($content);
@@ -99,7 +101,7 @@ class SG_iCal_Parser {
 		$current_data = array();
 
 		foreach( $content AS $line ) {
-			$line = new SG_iCal_Line($line);
+			$line = new Line($line);
 			if( $line->isBegin() ) {
 				// New block of data, $section = new block
 				$section = strtolower($line->getData());
@@ -146,7 +148,7 @@ class SG_iCal_Parser {
 	 * @param SG_iCal $ical
 	 */
 	protected static function storeSection( $section, $data, SG_iCal $ical ) {
-		$data = SG_iCal_Factory::Factory($ical, $section, $data);
+		$data = Factory::Factory($ical, $section, $data);
 		switch( $section ) {
 			case 'vcalendar':
 				return $ical->setCalendarInfo( $data );

@@ -1,5 +1,7 @@
 <?php // BUILD: Remove line
 
+namespace sg\ical;
+
 /**
  * A class to store Frequency-rules in. Will allow a easy way to find the
  * last and next occurrence of the rule.
@@ -18,11 +20,11 @@
  * By pushing the next period onto the stack as the last option will
  * (hopefully) remove the need for the awful simpleMode
  *
- * @package SG_iCalReader
+ * @package sg\ical
  * @author Morten Fangel (C) 2008
  * @license http://creativecommons.org/licenses/by-sa/2.5/dk/deed.en_GB CC-BY-SA-DK
  */
-class SG_iCal_Freq {
+class Freq {
 	protected $weekdays = array('MO'=>'monday', 'TU'=>'tuesday', 'WE'=>'wednesday', 'TH'=>'thursday', 'FR'=>'friday', 'SA'=>'saturday', 'SU'=>'sunday');
 	protected $knownRules = array('month', 'weekno', 'day', 'monthday', 'yearday', 'hour', 'minute'); //others : 'setpos', 'second'
 	protected $ruleModifiers = array('wkst');

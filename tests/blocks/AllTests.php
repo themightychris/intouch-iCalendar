@@ -1,5 +1,5 @@
 <?php
-require_once 'PHPUnit/Framework.php';
+require_once 'PHPUnit/Framework/TestSuite.php';
 require_once dirname(__FILE__).'/VEventTest.php';
 
 class Blocks_AllTests {

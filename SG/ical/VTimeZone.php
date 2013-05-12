@@ -1,5 +1,7 @@
 <?php // BUILD: Remove line
 
+namespace sg\ical;
+
 /**
  * The wrapper for vtimezones. Stores the timezone-id and the setup for
  * daylight savings and standard time.
@@ -8,18 +10,16 @@
  * @author Morten Fangel (C) 2008
  * @license http://creativecommons.org/licenses/by-sa/2.5/dk/deed.en_GB CC-BY-SA-DK
  */
-class SG_iCal_VTimeZone {
+class VTimeZone {
 	protected $tzid;
 	protected $daylight;
 	protected $standard;
 	protected $cache = array();
 
 	/**
-	 * Constructs a new SG_iCal_VTimeZone
+	 * Constructs a new sg\ical\VTimeZone
 	 */
 	public function __construct( $data ) {
-		require_once dirname(__FILE__).'/../helpers/SG_iCal_Freq.php'; // BUILD: Remove line
-
 		$this->tzid = $data['tzid'];
 		$this->daylight = $data['daylight'];
 		$this->standard = $data['standard'];
@@ -79,8 +79,8 @@ class SG_iCal_VTimeZone {
 				return $this->cache[$ts];
 			}
 
-			$daylight_freq = new SG_iCal_Freq($this->daylight['rrule'], strtotime($this->daylight['dtstart']));
-			$standard_freq = new SG_iCal_Freq($this->standard['rrule'], strtotime($this->standard['dtstart']));
+			$daylight_freq = new Freq($this->daylight['rrule'], strtotime($this->daylight['dtstart']));
+			$standard_freq = new Freq($this->standard['rrule'], strtotime($this->standard['dtstart']));
 			$last_standard = $standard_freq->previousOccurrence($ts);
 			$last_dst = $daylight_freq->previousOccurrence($ts);
 			if( $last_dst > $last_standard ) {

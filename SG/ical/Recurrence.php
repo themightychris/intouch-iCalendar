@@ -1,5 +1,7 @@
 <?php // BUILD: Remove line
 
+namespace sg\ical;
+
 /**
  * A wrapper for recurrence rules in iCalendar.  Parses the given line and puts the
  * recurrence rules in the correct field of this object.
@@ -8,11 +10,11 @@
  * information on the recurrence rules themselves.  Page 116 and onward contains
  * some great examples which were often used for testing.
  *
- * @package SG_iCalReader
+ * @package sg\ical
  * @author Steven Oxley
  * @license http://creativecommons.org/licenses/by-sa/2.5/dk/deed.en_GB CC-BY-SA-DK
  */
-class SG_iCal_Recurrence {
+class Recurrence {
 
 	public $rrule;
 
@@ -45,10 +47,10 @@ class SG_iCal_Recurrence {
 
 	/**
 	 * Creates an recurrence object with a passed in line.  Parses the line.
-	 * @param object $line an SG_iCal_Line object which will be parsed to get the
+	 * @param object $line an sg\ical\Line object which will be parsed to get the
 	 * desired information.
 	 */
-	public function __construct(SG_iCal_Line $line) {
+	public function __construct(Line $line) {
 		$this->parseLine($line->getData());
 	}
 

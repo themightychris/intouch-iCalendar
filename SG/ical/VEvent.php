@@ -1,5 +1,7 @@
 <?php // BUILD: Remove line
 
+namespace sg\ical;
+
 /**
  * The wrapper for vevents. Will reveal a unified and simple api for
  * the events, which include always finding a start and end (except
@@ -9,11 +11,11 @@
  * Will apply the specified timezone to timestamps if a tzid is
  * specified
  *
- * @package SG_iCalReader
+ * @package sg\ical
  * @author Morten Fangel (C) 2008
  * @license http://creativecommons.org/licenses/by-sa/2.5/dk/deed.en_GB CC-BY-SA-DK
  */
-class SG_iCal_VEvent {
+class VEvent {
 	const DEFAULT_CONFIRMED = true;
 
 	protected $uid;
@@ -33,28 +35,28 @@ class SG_iCal_VEvent {
 	public $excluded;   //EXDATE(s)
 	public $added;      //RDATE(s)
 
-	public $freq; //getFrequency() SG_iCal_Freq
+	public $freq; //getFrequency() sg\ical\Freq
 
 	public $data;
 
 	/**
-	 * Constructs a new SG_iCal_VEvent. Needs the SG_iCalReader
+	 * Constructs a new sg\ical\VEvent. Needs the SG_iCalReader
 	 * supplied so it can query for timezones.
-	 * @param SG_iCal_Line[] $data
+	 * @param sg\ical\Line[] $data
 	 * @param SG_iCalReader $ical
 	 */
-	public function __construct($data, SG_iCal $ical) {
+	public function __construct($data, iCal $ical) {
 
 		$this->uid = $data['uid']->getData();
 		unset($data['uid']);
 
 		if ( isset($data['rrule']) ) {
-			$this->recurrence = new SG_iCal_Recurrence($data['rrule']);
+			$this->recurrence = new Recurrence($data['rrule']);
 			unset($data['rrule']);
 		}
 
 		if ( isset($data['exrule']) ) {
-			$this->recurex = new SG_iCal_Recurrence($data['exrule']);
+			$this->recurex = new Recurrence($data['exrule']);
 			unset($data['exrule']);
 		}
 
@@ -67,7 +69,7 @@ class SG_iCal_VEvent {
 			$this->end = $this->getTimestamp($data['dtend'], $ical);
 			unset($data['dtend']);
 		} elseif( isset($data['duration']) ) {
-			$dur = new SG_iCal_Duration( $data['duration']->getData() );
+			$dur = new Duration( $data['duration']->getData() );
 			$this->end = $this->start + $dur->getDuration();
 			unset($data['duration']);
 		}
@@ -126,18 +128,18 @@ class SG_iCal_VEvent {
 			date_default_timezone_set($this->previous_tz);
 		}
 
-		$this->data = SG_iCal_Line::Remove_Line($data);
+		$this->data = Line::Remove_Line($data);
 	}
 
 
 	/**
 	 * Returns the Event Occurrences Iterator (if recurrence set)
-	 * @return SG_iCal_Freq
+	 * @return sg\ical\Freq
 	 */
 	public function getFrequency() {
 		if (! isset($this->freq)) {
 			if ( isset($this->recurrence) ) {
-				$this->freq = new SG_iCal_Freq($this->recurrence->rrule, $this->start, $this->excluded, $this->added);
+				$this->freq = new Freq($this->recurrence->rrule, $this->start, $this->excluded, $this->added);
 			}
 		}
 		return $this->freq;
@@ -260,7 +262,7 @@ class SG_iCal_VEvent {
 	 * Set default timezone (temporary) to get timestamps
 	 * @return string
 	 */
-	protected function setLineTimeZone(SG_iCal_Line $line) {
+	protected function setLineTimeZone( Line $line ) {
 		if( isset($line['tzid']) ) {
 			if (!isset($this->previous_tz)) {
 				$this->previous_tz = @ date_default_timezone_get();
@@ -274,10 +276,10 @@ class SG_iCal_VEvent {
 
 	/**
 	 * Calculates the timestamp from a DT line.
-	 * @param $line SG_iCal_Line
+	 * @param $line sg\ical\Line
 	 * @return int
 	 */
-	protected function getTimestamp( SG_iCal_Line $line, SG_iCal $ical ) {
+	protected function getTimestamp( Line $line, iCal $ical ) {
 
 		if( isset($line['tzid']) ) {
 			$this->setLineTimeZone($line);

@@ -1,5 +1,18 @@
 <?php
 
+namespace sg\ical;
+
+require_once __DIR__ . '/Factory.php';
+require_once __DIR__ . '/Duration.php';
+require_once __DIR__ . '/Freq.php';
+require_once __DIR__ . '/Line.php';
+require_once __DIR__ . '/Parser.php';
+require_once __DIR__ . '/Query.php';
+require_once __DIR__ . '/Recurrence.php';
+require_once __DIR__ . '/VCalendar.php';
+require_once __DIR__ . '/VEvent.php';
+require_once __DIR__ . '/VTimeZone.php';
+
 define('SG_ICALREADER_VERSION', '0.7.0');
 
 /**
@@ -18,33 +31,25 @@ define('SG_ICALREADER_VERSION', '0.7.0');
  * }
  * ?>
  *
- * @package SG_iCalReader
+ * @package SG
  * @author Morten Fangel (C) 2008
  * @author xonev (C) 2010
  * @author Tanguy Pruvot (C) 2010
  * @license http://creativecommons.org/licenses/by-sa/2.5/dk/deed.en_GB CC-BY-SA-DK
  */
-class SG_iCal {
+class iCal {
 
 	//objects
-	public $information; //SG_iCal_VCalendar
-	public $timezones;   //SG_iCal_VTimeZone
+	public $information; //VCalendar
+	public $timezones;   //VTimeZone
 
-	protected $events; //SG_iCal_VEvent[]
+	protected $events; //VEvent[]
 
 	/**
 	 * Constructs a new iCalReader. You can supply the url now, or later using setUrl
 	 * @param $url string
 	 */
 	public function __construct($url = false) {
-		require_once dirname(__FILE__) . '/helpers/SG_iCal_Line.php'; // BUILD: Remove line
-		require_once dirname(__FILE__) . '/helpers/SG_iCal_Duration.php'; // BUILD: Remove line
-		require_once dirname(__FILE__) . '/helpers/SG_iCal_Freq.php'; // BUILD: Remove line
-		require_once dirname(__FILE__) . '/helpers/SG_iCal_Recurrence.php'; // BUILD: Remove line
-		require_once dirname(__FILE__) . '/helpers/SG_iCal_Parser.php'; // BUILD: Remove line
-		require_once dirname(__FILE__) . '/helpers/SG_iCal_Query.php'; // BUILD: Remove line
-		require_once dirname(__FILE__) . '/helpers/SG_iCal_Factory.php'; // BUILD: Remove line
-
 		$this->setUrl($url);
 	}
 
@@ -61,7 +66,7 @@ class SG_iCal {
 	/**
 	 * Returns the main calendar info. You can then query the returned
 	 * object with ie getTitle().
-	 * @return SG_iCal_VCalendar
+	 * @return sg\ical\VCalendar
 	 */
 	public function getCalendarInfo() {
 		return $this->information;
@@ -69,9 +74,9 @@ class SG_iCal {
 
 	/**
 	 * Sets the calendar info for this calendar
-	 * @param SG_iCal_VCalendar $info
+	 * @param sg\ical\VCalendar $info
 	 */
-	public function setCalendarInfo( SG_iCal_VCalendar $info ) {
+	public function setCalendarInfo( VCalendar $info ) {
 		$this->information = $info;
 	}
 
@@ -107,7 +112,7 @@ class SG_iCal {
 	 * Adds a new timezone to this calendar
 	 * @param SG_iCal_VTimeZone $tz
 	 */
-	public function addTimeZone( SG_iCal_VTimeZone $tz ) {
+	public function addTimeZone( VTimeZone $tz ) {
 		$this->timezones[] = $tz;
 	}
 
@@ -123,12 +128,12 @@ class SG_iCal {
 	 * Adds a event to this calendar
 	 * @param SG_iCal_VEvent $event
 	 */
-	public function addEvent( SG_iCal_VEvent $event ) {
+	public function addEvent( VEvent $event ) {
 		$this->events[] = $event;
 	}
 }
 
 /**
- * For legacy reasons, we keep the name SG_iCalReader..
+ * For legacy reasons, we keep the name iCalReader..
  */
-class SG_iCalReader extends SG_iCal {}
+class iCalReader extends iCal {}

@@ -1,19 +1,23 @@
-<?php // BUILD: Remove line
+<?php
+
+namespace sg\ical;
+
+use \IteratorAggregate;
 
 /**
  * The wrapper for the main vcalendar data. Used instead of ArrayObject
  * so you can easily query for title and description.
  * Exposes a iterator that will loop though all the data
  *
- * @package SG_iCalReader
+ * @package sg\ical
  * @author Morten Fangel (C) 2008
  * @license http://creativecommons.org/licenses/by-sa/2.5/dk/deed.en_GB CC-BY-SA-DK
  */
-class SG_iCal_VCalendar implements IteratorAggregate {
+class VCalendar implements IteratorAggregate {
 	protected $data;
 
 	/**
-	 * Creates a new SG_iCal_VCalendar.
+	 * Creates a new sg\ical\VCalendar.
 	 */
 	public function __construct($data) {
 		$this->data = $data;
@@ -53,4 +57,3 @@ class SG_iCal_VCalendar implements IteratorAggregate {
 	}
 }
 
-?>

@@ -1,7 +1,7 @@
 <?php
 
 require_once dirname(__FILE__) . '/../common.php';
-require_once 'PHPUnit/Framework.php';
+require_once 'PHPUnit/Framework/TestCase.php';
 
 class FreqTest extends PHPUnit_Framework_TestCase {
 
@@ -48,7 +48,7 @@ class FreqTest extends PHPUnit_Framework_TestCase {
 		$start = strtotime('19970902T090000');
 		$this->assertRule( $rule, $start, $dateset);
 
-		$freq = new SG_iCal_Freq($rule, $start);
+		$freq = new sg\ical\Freq($rule, $start);
 		$this->assertEquals(882864000, $freq->previousOccurrence(time()));
 	}
 
@@ -117,7 +117,7 @@ class FreqTest extends PHPUnit_Framework_TestCase {
 			$start = strtotime('+1 year', $start);
 			$this->assertRule( $rule, $start, $datesets[2]);
 
-			$freq = new SG_iCal_Freq($rule, $start);
+			$freq = new sg\ical\Freq($rule, $start);
 			$this->assertEquals(949305600, $freq->previousOccurrence(time()));
 		}
 	}
@@ -159,7 +159,7 @@ class FreqTest extends PHPUnit_Framework_TestCase {
 		$start = strtotime('19970902T090000');
 		$this->assertRule( $rule, $start, $dateset);
 
-		$freq = new SG_iCal_Freq($rule, $start);
+		$freq = new sg\ical\Freq($rule, $start);
 		$this->assertEquals(882864000, $freq->previousOccurrence(time()), 'Failed getting correct end date');
 	}
 
@@ -205,7 +205,7 @@ class FreqTest extends PHPUnit_Framework_TestCase {
 		$start = strtotime('19970902T090000');
 		$this->assertRule( $rule, $start, $dateset);
 
-		$freq = new SG_iCal_Freq($rule, $start);
+		$freq = new sg\ical\Freq($rule, $start);
 		$this->assertEquals(882777600, $freq->previousOccurrence(time()), 'Failed getting correct end date');
 	}
 
@@ -617,7 +617,7 @@ class FreqTest extends PHPUnit_Framework_TestCase {
 	public function testFirstOccurrencesByYearDay() {
 		$rule = 'FREQ=YEARLY;INTERVAL=2;BYYEARDAY=1;COUNT=5';
 		$start = strtotime('2009-10-27T090000');
-		$freq = new SG_iCal_Freq($rule, $start);
+		$freq = new sg\ical\Freq($rule, $start);
 		$this->assertEquals(strtotime('2009-10-27T09:00:00'), $freq->firstOccurrence());
 		$this->assertEquals(strtotime('2011-01-01T09:00:00'), $freq->nextOccurrence($start));
 	}
@@ -625,21 +625,21 @@ class FreqTest extends PHPUnit_Framework_TestCase {
 	public function testFirstOccurrencesByYearDayWithoutFirstDate() {
 		$rule = 'FREQ=YEARLY;INTERVAL=2;BYYEARDAY=1;COUNT=5';
 		$start = strtotime('2009-10-27T090000');
-		$freq = new SG_iCal_Freq($rule, $start, array($start));
+		$freq = new sg\ical\Freq($rule, $start, array($start));
 		$this->assertEquals(strtotime('2011-01-01T09:00:00'), $freq->firstOccurrence());
 	}
 
 	public function testLastOccurrenceByYearDay() {
 		$rule = 'FREQ=YEARLY;INTERVAL=2;BYYEARDAY=1;COUNT=5';
 		$start = strtotime('2011-01-01T090000');
-		$freq = new SG_iCal_Freq($rule, $start);
+		$freq = new sg\ical\Freq($rule, $start);
 		$this->assertEquals(strtotime('2019-01-01T09:00:00'), $freq->lastOccurrence());
 	}
 
 	public function testCacheCount() {
 		$rule = 'FREQ=YEARLY;INTERVAL=2;BYYEARDAY=1;COUNT=5';
 		$start = strtotime('2011-01-01T090000');
-		$freq = new SG_iCal_Freq($rule, $start);
+		$freq = new sg\ical\Freq($rule, $start);
 		$this->assertEquals(5, count($freq->getAllOccurrences()));
 		$this->assertEquals(strtotime('2019-01-01T09:00:00'), $freq->lastOccurrence());
 	}
@@ -657,7 +657,7 @@ class FreqTest extends PHPUnit_Framework_TestCase {
 
 	//check a serie of dates
 	private function assertRule( $rule, $start, $dateset ) {
-		$freq = new SG_iCal_Freq($rule, $start);
+		$freq = new sg\ical\Freq($rule, $start);
 		reset($dateset);
 		$n = $start - 1;
 		do {

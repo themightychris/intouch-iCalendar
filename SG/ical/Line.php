@@ -1,5 +1,11 @@
 <?php // BUILD: Remove line
 
+namespace sg\ical;
+
+use \ArrayAccess;
+use \Countable;
+use \IteratorAggregate;
+
 /**
  * A class for storing a single (complete) line of the iCal file.
  * Will find the line-type, the arguments and the data of the file and
@@ -10,11 +16,11 @@
  * Params can be access via the ArrayAccess. A iterator is also avilable
  * to iterator over the params.
  *
- * @package SG_iCalReader
+ * @package sg\ical
  * @author Morten Fangel (C) 2008
  * @license http://creativecommons.org/licenses/by-sa/2.5/dk/deed.en_GB CC-BY-SA-DK
  */
-class SG_iCal_Line implements ArrayAccess, Countable, IteratorAggregate {
+class Line implements ArrayAccess, Countable, IteratorAggregate {
 	protected $ident;
 	protected $data;
 	protected $params = array();
