@@ -1,6 +1,6 @@
 <?php
 
-require_once('../sg/ical/iCal.php');
+require_once('../intouch/ical/iCal.php');
 
 use sg\ical\iCal;
 use sg\ical\Query;

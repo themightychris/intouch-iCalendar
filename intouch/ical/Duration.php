@@ -1,11 +1,11 @@
 <?php // BUILD: Remove line
 
-namespace sg\ical;
+namespace intouch\ical;
 
 /**
  * A class for calculating how many seconds a duration-string is
  *
- * @package sg\ical
+ * @package intouch\ical
  * @author Morten Fangel (C) 2008
  * @author Michael Kahn 2013
  * @license http://creativecommons.org/licenses/by-sa/2.5/dk/deed.en_GB CC-BY-SA-DK
@@ -15,7 +15,7 @@ class Duration {
 	protected $dur;
 
 	/**
-	 * Constructs a new sg\ical\Duration from a duration-rule.
+	 * Constructs a new intouch\ical\Duration from a duration-rule.
 	 * The basic build-up of DURATIONs are:
 	 *  (["+"] / "-") "P" (dur-date / dur-date + "T" + dur-time / dur-time / dur-week)
 	 * Is solved via a really fugly reg-exp with way to many ()'s..

@@ -1,6 +1,6 @@
 <?php // BUILD: Remove line
 
-namespace sg\ical;
+namespace intouch\ical;
 
 use \ArrayAccess;
 use \Countable;
@@ -16,7 +16,7 @@ use \IteratorAggregate;
  * Params can be access via the ArrayAccess. A iterator is also avilable
  * to iterator over the params.
  *
- * @package sg\ical
+ * @package intouch\ical
  * @author Morten Fangel (C) 2008
  * @author Michael Kahn 2013
  * @license http://creativecommons.org/licenses/by-sa/2.5/dk/deed.en_GB CC-BY-SA-DK
@@ -95,10 +95,10 @@ class Line implements ArrayAccess, Countable, IteratorAggregate {
 	}
 
 	/**
-	 * A static helper to get a array of sg\ical\Line's, and calls
+	 * A static helper to get a array of intouch\ical\Line's, and calls
 	 * getData() on each of them to lay the data "bare"..
 	 *
-	 * @param sg\ical\Line[]
+	 * @param intouch\ical\Line[]
 	 * @return array
 	 */
 	public static function Remove_Line($arr) {

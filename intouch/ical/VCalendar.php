@@ -1,6 +1,6 @@
 <?php
 
-namespace sg\ical;
+namespace intouch\ical;
 
 use \IteratorAggregate;
 
@@ -9,7 +9,7 @@ use \IteratorAggregate;
  * so you can easily query for title and description.
  * Exposes a iterator that will loop though all the data
  *
- * @package sg\ical
+ * @package intouch\ical
  * @author Morten Fangel (C) 2008
  * @author Michael Kahn 2013
  * @license http://creativecommons.org/licenses/by-sa/2.5/dk/deed.en_GB CC-BY-SA-DK
@@ -18,7 +18,7 @@ class VCalendar implements IteratorAggregate {
 	protected $data;
 
 	/**
-	 * Creates a new sg\ical\VCalendar.
+	 * Creates a new intouch\ical\VCalendar.
 	 */
 	public function __construct($data) {
 		$this->data = $data;

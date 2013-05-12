@@ -7,7 +7,7 @@ updated for PHP 5.3+ namespaces.
 -------------------------------------------------------------------------------
 
 A simple example :
- use sg\ical\iCal;
+ use intouch\ical\iCal;
  $ical = new iCal( "./basic.ics" );
  //or
  $ical = new iCal( "http://example.com/calendar.ics" );
@@ -24,7 +24,7 @@ CHANGELOG :
 -------------------------------------------------------------------------------
 
 current (12 may 2013)
- + converted to PHP 5.3+ namespace sg\ical
+ + converted to PHP 5.3+ namespace intouch\ical
 
 0.7.0 (30 oct 2010)
  + ical EXDATE support (excluded dates in a range)

@@ -1,6 +1,6 @@
 <?php // BUILD: Remove line
 
-namespace sg\ical;
+namespace intouch\ical;
 
 use \DateTime;
 
@@ -12,7 +12,7 @@ use \DateTime;
  * information on the recurrence rules themselves.  Page 116 and onward contains
  * some great examples which were often used for testing.
  *
- * @package sg\ical
+ * @package intouch\ical
  * @author Steven Oxley
  * @author Michael Kahn 2013
  * @license http://creativecommons.org/licenses/by-sa/2.5/dk/deed.en_GB CC-BY-SA-DK
@@ -50,7 +50,7 @@ class Recurrence {
 
 	/**
 	 * Creates an recurrence object with a passed in line.  Parses the line.
-	 * @param object $line an sg\ical\Line object which will be parsed to get the
+	 * @param object $line an intouch\ical\Line object which will be parsed to get the
 	 * desired information.
 	 */
 	public function __construct(Line $line) {

@@ -1,6 +1,6 @@
 <?php // BUILD: Remove line
 
-namespace sg\ical;
+namespace intouch\ical;
 
 /**
  * The wrapper for vevents. Will reveal a unified and simple api for
@@ -11,7 +11,7 @@ namespace sg\ical;
  * Will apply the specified timezone to timestamps if a tzid is
  * specified
  *
- * @package sg\ical
+ * @package intouch\ical
  * @author Morten Fangel (C) 2008
  * @author Michael Kahn 2013
  * @license http://creativecommons.org/licenses/by-sa/2.5/dk/deed.en_GB CC-BY-SA-DK
@@ -36,15 +36,15 @@ class VEvent {
 	public $excluded;   //EXDATE(s)
 	public $added;      //RDATE(s)
 
-	public $freq; //getFrequency() sg\ical\Freq
+	public $freq; //getFrequency() intouch\ical\Freq
 
 	public $data;
 
 	/**
-	 * Constructs a new sg\ical\VEvent. Needs the iCal
+	 * Constructs a new intouch\ical\VEvent. Needs the iCal
 	 * supplied so it can query for timezones.
-	 * @param sg\ical\Line[] $data
-	 * @param sg\ical\iCal $ical
+	 * @param intouch\ical\Line[] $data
+	 * @param intouch\ical\iCal $ical
 	 */
 	public function __construct($data, iCal $ical) {
 
@@ -135,7 +135,7 @@ class VEvent {
 
 	/**
 	 * Returns the Event Occurrences Iterator (if recurrence set)
-	 * @return sg\ical\Freq
+	 * @return intouch\ical\Freq
 	 */
 	public function getFrequency() {
 		if (! isset($this->freq)) {
@@ -277,7 +277,7 @@ class VEvent {
 
 	/**
 	 * Calculates the timestamp from a DT line.
-	 * @param $line sg\ical\Line
+	 * @param $line intouch\ical\Line
 	 * @return int
 	 */
 	protected function getTimestamp( Line $line, iCal $ical ) {

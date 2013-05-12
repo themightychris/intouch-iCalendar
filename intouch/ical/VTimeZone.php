@@ -1,12 +1,12 @@
 <?php // BUILD: Remove line
 
-namespace sg\ical;
+namespace intouch\ical;
 
 /**
  * The wrapper for vtimezones. Stores the timezone-id and the setup for
  * daylight savings and standard time.
  *
- * @package sg\ical
+ * @package intouch\ical
  * @author Morten Fangel (C) 2008
  * @author Michael Kahn 2013
  * @license http://creativecommons.org/licenses/by-sa/2.5/dk/deed.en_GB CC-BY-SA-DK
@@ -18,7 +18,7 @@ class VTimeZone {
 	protected $cache = array();
 
 	/**
-	 * Constructs a new sg\ical\VTimeZone
+	 * Constructs a new intouch\ical\VTimeZone
 	 */
 	public function __construct( $data ) {
 		$this->tzid = $data['tzid'];

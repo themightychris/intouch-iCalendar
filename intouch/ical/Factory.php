@@ -1,13 +1,13 @@
 <?php // BUILD: Remove line
 
-namespace sg\ical;
+namespace intouch\ical;
 
 /**
  * A simple Factory for converting a section/data pair into the
  * corrosponding block-object. If the section isn't known a simple
  * ArrayObject is used instead.
  *
- * @package sg\ical
+ * @package intouch\ical
  * @author Morten Fangel (C) 2008
  * @author Michael Kahn 2013
  * @license http://creativecommons.org/licenses/by-sa/2.5/dk/deed.en_GB CC-BY-SA-DK
@@ -17,14 +17,14 @@ class Factory {
 	 * Returns a new block-object for the section/data-pair. The list
 	 * of returned objects is:
 	 *
-	 * vcalendar => sg\ical\VCalendar
-	 * vtimezone => sg\ical\VTimeZone
-	 * vevent => sg\ical\VEvent
+	 * vcalendar => intouch\ical\VCalendar
+	 * vtimezone => intouch\ical\VTimeZone
+	 * vevent => intouch\ical\VEvent
 	 * * => ArrayObject
 	 *
-	 * @param $ical sg\ical\iCal The reader this section/data-pair belongs to
+	 * @param $ical intouch\ical\iCal The reader this section/data-pair belongs to
 	 * @param $section string
-	 * @param sg\ical\Line[]
+	 * @param intouch\ical\Line[]
 	 */
 	public static function factory( iCal $ical, $section, $data ) {
 		switch( $section ) {

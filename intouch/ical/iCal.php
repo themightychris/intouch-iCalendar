@@ -1,6 +1,6 @@
 <?php
 
-namespace sg\ical;
+namespace intouch\ical;
 
 require_once __DIR__ . '/Factory.php';
 require_once __DIR__ . '/Duration.php';
@@ -27,14 +27,14 @@ define('SG_ICALREADER_VERSION', '0.8.0');
  *
  * A simple example:
  * <?php
- * use sg\ical\iCal;
+ * use intouch\ical\iCal;
  * $ical = new iCal("http://example.com/calendar.ics");
  * foreach( $ical->getEvents() As $event ) {
  *   // Do stuff with the event $event
  * }
  * ?>
  *
- * @package sg\ical
+ * @package intouch\ical
  * @author Morten Fangel (C) 2008
  * @author xonev (C) 2010
  * @author Tanguy Pruvot (C) 2010
@@ -70,7 +70,7 @@ class iCal {
 	/**
 	 * Returns the main calendar info. You can then query the returned
 	 * object with ie getTitle().
-	 * @return sg\ical\VCalendar
+	 * @return intouch\ical\VCalendar
 	 */
 	public function getCalendarInfo() {
 		return $this->information;
@@ -78,7 +78,7 @@ class iCal {
 
 	/**
 	 * Sets the calendar info for this calendar
-	 * @param sg\ical\VCalendar $info
+	 * @param intouch\ical\VCalendar $info
 	 */
 	public function setCalendarInfo( VCalendar $info ) {
 		$this->information = $info;
@@ -94,7 +94,7 @@ class iCal {
 	 * returned.
 	 *
 	 * @param $tzid string
-	 * @return sg\ical\VTimeZone
+	 * @return intouch\ical\VTimeZone
 	 */
 	public function getTimeZoneInfo( $tzid = null ) {
 		if( $tzid == null ) {
@@ -114,7 +114,7 @@ class iCal {
 
 	/**
 	 * Adds a new timezone to this calendar
-	 * @param sg\ical\VTimeZone $tz
+	 * @param intouch\ical\VTimeZone $tz
 	 */
 	public function addTimeZone( VTimeZone $tz ) {
 		$this->timezones[] = $tz;
@@ -130,7 +130,7 @@ class iCal {
 
 	/**
 	 * Adds a event to this calendar
-	 * @param sg\ical\VEvent $event
+	 * @param intouch\ical\VEvent $event
 	 */
 	public function addEvent( VEvent $event ) {
 		$this->events[] = $event;

@@ -1,10 +1,10 @@
 <?php // BUILD: Remove line
 
-namespace sg\ical;
+namespace intouch\ical;
 
 /**
  * Class Parser
- * @package sg\ical
+ * @package intouch\ical
  *
  * @author Morten Fangel (C) 2008
  * @author Michael Kahn 2013
@@ -14,7 +14,7 @@ class Parser {
 	/**
 	 * Fetches $url and passes it on to be parsed
 	 * @param string $url
-	 * @param sg\ical\iCal$ical
+	 * @param intouch\ical\iCal$ical
 	 */
 	public static function Parse( $url, iCal $ical ) {
 		$content = self::Fetch( $url );
@@ -25,7 +25,7 @@ class Parser {
 	/**
 	 * Passes a text string on to be parsed
 	 * @param string $content
-	 * @param sg\ical\iCal $ical
+	 * @param intouch\ical\iCal $ical
 	 */
 	public static function ParseString($content, iCal $ical ) {
 		$content = self::UnfoldLines($content);
@@ -99,7 +99,7 @@ class Parser {
 	 * Parses the feed found in content and calls storeSection to store
 	 * parsed data
 	 * @param string $content
-	 * @param sg\ical\iCal$ical
+	 * @param intouch\ical\iCal$ical
 	 */
 	private static function _Parse( $content, iCal $ical ) {
 		$main_sections = array('vevent', 'vjournal', 'vtodo', 'vtimezone', 'vcalendar');
@@ -150,10 +150,10 @@ class Parser {
 	}
 
 	/**
-	 * Stores the data in provided sg\ical\iCalobject
+	 * Stores the data in provided intouch\ical\iCalobject
 	 * @param string $section eg 'vcalender', 'vevent' etc
 	 * @param string $data
-	 * @param sg\ical\iCal$ical
+	 * @param intouch\ical\iCal$ical
 	 */
 	protected static function storeSection( $section, $data, iCal $ical ) {
 		$data = Factory::Factory($ical, $section, $data);
