@@ -1,6 +1,9 @@
 <?php
 
-require_once('../SG_iCal.php');
+require_once('../sg/ical/iCal.php');
+
+use sg\ical\iCal;
+use sg\ical\Query;
 
 function dump_t($x) {
 	echo "<pre>".print_r($x,true)."</pre>";
@@ -8,8 +11,8 @@ function dump_t($x) {
 $ICS = "exdate.ics";
 //echo dump_t(file_get_contents($ICS));
 
-$ical = new SG_iCalReader($ICS);
-$query = new SG_iCal_Query();
+$ical = new iCal($ICS);
+$query = new Query();
 
 $evts = $ical->getEvents();
 //$evts = $query->Between($ical,strtotime('20100901'),strtotime('20101131'));

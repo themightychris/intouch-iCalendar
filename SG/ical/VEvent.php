@@ -41,10 +41,10 @@ class VEvent {
 	public $data;
 
 	/**
-	 * Constructs a new sg\ical\VEvent. Needs the SG_iCalReader
+	 * Constructs a new sg\ical\VEvent. Needs the iCal
 	 * supplied so it can query for timezones.
 	 * @param sg\ical\Line[] $data
-	 * @param SG_iCalReader $ical
+	 * @param sg\ical\iCal $ical
 	 */
 	public function __construct($data, iCal $ical) {
 

@@ -23,7 +23,7 @@ class Query {
 	 * @return sg\ical\VEvent[]
 	 */
 	public static function Between(iCal $ical, $start, $end ) {
-		if( $ical instanceof SG_iCalReader ) {
+		if( $ical instanceof iCal ) {
 			$ical = $ical->getEvents();
 		}
 		if( !is_array($ical) ) {
@@ -43,7 +43,7 @@ class Query {
 	/**
 	 * Returns all events from the calendar after a given timestamp
 	 *
-	 * @param SG_iCalReader|array $ical The calendar to query
+	 * @param sg\ical\iCal|array $ical The calendar to query
 	 * @param int $start
 	 * @return sg\ical\VEvent[]
 	 */

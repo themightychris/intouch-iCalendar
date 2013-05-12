@@ -25,16 +25,18 @@ define('SG_ICALREADER_VERSION', '0.7.0');
  *
  * A simple example:
  * <?php
- * $ical = new SG_iCalReader("http://example.com/calendar.ics");
+ * use sg\ical\iCal;
+ * $ical = new iCal("http://example.com/calendar.ics");
  * foreach( $ical->getEvents() As $event ) {
  *   // Do stuff with the event $event
  * }
  * ?>
  *
- * @package SG
+ * @package sg\ical
  * @author Morten Fangel (C) 2008
  * @author xonev (C) 2010
  * @author Tanguy Pruvot (C) 2010
+ * @author Michael Kahn (C) 2013
  * @license http://creativecommons.org/licenses/by-sa/2.5/dk/deed.en_GB CC-BY-SA-DK
  */
 class iCal {
@@ -59,7 +61,7 @@ class iCal {
 	 */
 	public function setUrl( $url = false ) {
 		if( $url !== false ) {
-			SG_iCal_Parser::Parse($url, $this);
+			Parser::Parse($url, $this);
 		}
 	}
 
@@ -90,7 +92,7 @@ class iCal {
 	 * returned.
 	 *
 	 * @param $tzid string
-	 * @return SG_iCal_VTimeZone
+	 * @return sg\ical\VTimeZone
 	 */
 	public function getTimeZoneInfo( $tzid = null ) {
 		if( $tzid == null ) {
@@ -110,7 +112,7 @@ class iCal {
 
 	/**
 	 * Adds a new timezone to this calendar
-	 * @param SG_iCal_VTimeZone $tz
+	 * @param sg\ical\VTimeZone $tz
 	 */
 	public function addTimeZone( VTimeZone $tz ) {
 		$this->timezones[] = $tz;
@@ -126,7 +128,7 @@ class iCal {
 
 	/**
 	 * Adds a event to this calendar
-	 * @param SG_iCal_VEvent $event
+	 * @param sg\ical\VEvent $event
 	 */
 	public function addEvent( VEvent $event ) {
 		$this->events[] = $event;

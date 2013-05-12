@@ -6,7 +6,7 @@ namespace sg\ical;
  * The wrapper for vtimezones. Stores the timezone-id and the setup for
  * daylight savings and standard time.
  *
- * @package SG_iCalReader
+ * @package sg\ical
  * @author Morten Fangel (C) 2008
  * @author Michael Kahn 2013
  * @license http://creativecommons.org/licenses/by-sa/2.5/dk/deed.en_GB CC-BY-SA-DK

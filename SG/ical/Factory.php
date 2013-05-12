@@ -17,9 +17,9 @@ class Factory {
 	 * Returns a new block-object for the section/data-pair. The list
 	 * of returned objects is:
 	 *
-	 * vcalendar => SG_iCal_VCalendar
-	 * vtimezone => SG_iCal_VTimeZone
-	 * vevent => SG_iCal_VEvent
+	 * vcalendar => sg\ical\VCalendar
+	 * vtimezone => sg\ical\VTimeZone
+	 * vevent => sg\ical\VEvent
 	 * * => ArrayObject
 	 *
 	 * @param $ical sg\ical\iCal The reader this section/data-pair belongs to
@@ -29,11 +29,11 @@ class Factory {
 	public static function factory( iCal $ical, $section, $data ) {
 		switch( $section ) {
 			case "vcalendar":
-				return new SG_iCal_VCalendar(SG_iCal_Line::Remove_Line($data), $ical );
+				return new VCalendar(Line::Remove_Line($data), $ical );
 			case "vtimezone":
-				return new SG_iCal_VTimeZone(SG_iCal_Line::Remove_Line($data), $ical );
+				return new VTimeZone(Line::Remove_Line($data), $ical );
 			case "vevent":
-				return new SG_iCal_VEvent($data, $ical );
+				return new VEvent($data, $ical );
 
 			default:
 				return new ArrayObject(Line::Remove_Line((array) $data) );

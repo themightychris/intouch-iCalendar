@@ -95,10 +95,10 @@ class Line implements ArrayAccess, Countable, IteratorAggregate {
 	}
 
 	/**
-	 * A static helper to get a array of SG_iCal_Line's, and calls
+	 * A static helper to get a array of sg\ical\Line's, and calls
 	 * getData() on each of them to lay the data "bare"..
 	 *
-	 * @param SG_iCal_Line[]
+	 * @param sg\ical\Line[]
 	 * @return array
 	 */
 	public static function Remove_Line($arr) {
@@ -106,7 +106,7 @@ class Line implements ArrayAccess, Countable, IteratorAggregate {
 		foreach( $arr AS $k => $v ) {
 			if(is_array($v)) {
 				$rtn[$k] = self::Remove_Line($v);
-			} elseif( $v instanceof SG_iCal_Line ) {
+			} elseif( $v instanceof Line ) {
 				$rtn[$k] = $v->getData();
 			} else {
 				$rtn[$k] = $v;
