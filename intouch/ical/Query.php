@@ -6,9 +6,8 @@ namespace intouch\ical;
  *
  * A collection of functions to query the events in a calendar.
  *
- * @package intouch\ical
  * @author Morten Fangel (C) 2008
- * @author Michael Kahn 2013
+ * @author Michael Kahn (C) 2013
  * @license http://creativecommons.org/licenses/by-sa/2.5/dk/deed.en_GB CC-BY-SA-DK
  */
 class Query {

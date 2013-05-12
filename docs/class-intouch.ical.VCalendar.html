@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta name="generator" content="ApiGen 2.8.0" />
+
+	<title>Class intouch\ical\VCalendar | intouch-iCalendar</title>
+
+	<script type="text/javascript" src="resources/combined.js?2230489249"></script>
+	<script type="text/javascript" src="elementlist.js?1249410663"></script>
+	<link rel="stylesheet" type="text/css" media="all" href="resources/style.css?3505392360" />
+
+</head>
+
+<body>
+<div id="left">
+	<div id="menu">
+		<a href="index.html" title="Overview"><span>Overview</span></a>
+
+
+		<div id="groups">
+			<h3>Namespaces</h3>
+			<ul>
+				<li class="active"><a href="namespace-intouch.html">intouch<span></span></a>
+						<ul>
+				<li class="active"><a href="namespace-intouch.ical.html">ical</a>
+						</li>
+							</ul></li>
+			</ul>
+		</div>
+
+		<hr />
+
+
+		<div id="elements">
+			<h3>Classes</h3>
+			<ul>
+				<li><a href="class-intouch.ical.Duration.html">Duration</a></li>
+				<li><a href="class-intouch.ical.Factory.html">Factory</a></li>
+				<li><a href="class-intouch.ical.Freq.html">Freq</a></li>
+				<li><a href="class-intouch.ical.iCal.html">iCal</a></li>
+				<li><a href="class-intouch.ical.Line.html">Line</a></li>
+				<li><a href="class-intouch.ical.Parser.html">Parser</a></li>
+				<li><a href="class-intouch.ical.Query.html">Query</a></li>
+				<li><a href="class-intouch.ical.Recurrence.html">Recurrence</a></li>
+				<li class="active"><a href="class-intouch.ical.VCalendar.html">VCalendar</a></li>
+				<li><a href="class-intouch.ical.VEvent.html">VEvent</a></li>
+				<li><a href="class-intouch.ical.VTimeZone.html">VTimeZone</a></li>
+			</ul>
+
+
+
+
+
+		</div>
+	</div>
+</div>
+
+<div id="splitter"></div>
+
+<div id="right">
+<div id="rightInner">
+	<form id="search">
+		<input type="hidden" name="cx" value="" />
+		<input type="hidden" name="ie" value="UTF-8" />
+		<input type="text" name="q" class="text" />
+		<input type="submit" value="Search" />
+	</form>
+
+	<div id="navigation">
+		<ul>
+			<li>
+				<a href="index.html" title="Overview"><span>Overview</span></a>
+			</li>
+			<li>
+				<a href="namespace-intouch.ical.html" title="Summary of intouch\ical"><span>Namespace</span></a>
+			</li>
+			<li class="active">
+<span>Class</span>			</li>
+		</ul>
+		<ul>
+			<li>
+				<a href="tree.html" title="Tree view of classes, interfaces, traits and exceptions"><span>Tree</span></a>
+			</li>
+		</ul>
+		<ul>
+		</ul>
+	</div>
+
+<div id="content" class="class">
+	<h1>Class VCalendar</h1>
+
+
+	<div class="description">
+	
+<p>The wrapper for the main vcalendar data. Used instead of ArrayObject so you
+can easily query for title and description. Exposes a iterator that will loop
+though all the data</p>
+
+	</div>
+
+	<dl class="tree">
+		<dd style="padding-left:0px">
+<b><span>intouch\ical\VCalendar</span></b>			
+			 implements 
+<span>IteratorAggregate</span>
+			
+			
+		</dd>
+	</dl>
+
+
+
+
+
+
+
+
+	<div class="info">
+		
+		
+		<b>Namespace:</b> <a href="namespace-intouch.html">intouch</a>\<a href="namespace-intouch.ical.html">ical</a><br />
+		
+
+				<b>License:</b>
+				<a href="http://creativecommons.org/licenses/by-sa/2.5/dk/deed.en_GB">CC-BY-SA-DK</a><br />
+				<b>Author:</b>
+				Morten Fangel (C) 2008<br />
+				<b>Author:</b>
+				Michael Kahn (C) 2013<br />
+		<b>Located at</b> <a href="source-class-intouch.ical.VCalendar.html#7-58" title="Go to source code">ical/VCalendar.php</a><br />
+	</div>
+
+
+
+	<table class="summary" id="methods">
+	<caption>Methods summary</caption>
+	<tr data-order="__construct" id="___construct">
+
+		<td class="attributes"><code>
+			 public 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#___construct">#</a>
+		<code><a href="source-class-intouch.ical.VCalendar.html#19-24" title="Go to source code">__construct</a>( <span>mixed <var>$data</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Creates a new intouch\ical\VCalendar.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Creates a new intouch\ical\VCalendar.</p>
+
+
+
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="getTitle" id="_getTitle">
+
+		<td class="attributes"><code>
+			 public 
+			string
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_getTitle">#</a>
+		<code><a href="source-class-intouch.ical.VCalendar.html#26-37" title="Go to source code">getTitle</a>( )</code>
+
+		<div class="description short">
+			
+<p>Returns the title of the calendar. If no title is known, NULL will be
+returned</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Returns the title of the calendar. If no title is known, NULL will be
+returned</p>
+
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>string</code><br />
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="getDescription" id="_getDescription">
+
+		<td class="attributes"><code>
+			 public 
+			string
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_getDescription">#</a>
+		<code><a href="source-class-intouch.ical.VCalendar.html#39-50" title="Go to source code">getDescription</a>( )</code>
+
+		<div class="description short">
+			
+<p>Returns the description of the calendar. If no description is known, NULL
+will be returned.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Returns the description of the calendar. If no description is known, NULL
+will be returned.</p>
+
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>string</code><br />
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="getIterator" id="_getIterator">
+
+		<td class="attributes"><code>
+			 public 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_getIterator">#</a>
+		<code><a href="source-class-intouch.ical.VCalendar.html#52-57" title="Go to source code">getIterator</a>( )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+
+
+
+				<h4>See</h4>
+				<div class="list">
+						IteratorAggregate.getIterator()<br />
+				</div>
+
+
+				<h4>Implementation of</h4>
+				<div class="list"><code>IteratorAggregate::getIterator()</code></div>
+		</div>
+		</div></td>
+	</tr>
+	</table>
+
+
+
+
+
+
+
+
+
+
+
+
+	<table class="summary" id="properties">
+	<caption>Properties summary</caption>
+	<tr data-order="data" id="$data">
+		<td class="attributes"><code>
+			protected  
+			mixed
+		</code></td>
+
+		<td class="name">
+				<a href="source-class-intouch.ical.VCalendar.html#17" title="Go to source code"><var>$data</var></a>
+		</td>
+		<td class="value"><code></code></td>
+		<td class="description"><div>
+			<a href="#$data" class="anchor">#</a>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+			</div>
+		</div></td>
+	</tr>
+	</table>
+
+
+
+
+
+
+</div>
+
+	<div id="footer">
+		intouch-iCalendar API documentation generated by <a href="http://apigen.org">ApiGen 2.8.0</a>
+	</div>
+</div>
+</div>
+</body>
+</html>

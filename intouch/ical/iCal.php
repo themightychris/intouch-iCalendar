@@ -16,16 +16,17 @@ require_once __DIR__ . '/VTimeZone.php';
 define('SG_ICALREADER_VERSION', '0.8.0');
 
 /**
- * A simple iCal parser. Should take care of most stuff for ya
+ * A simple iCal parser.
  *
- * http://github.com/mfkahn/SG-iCalendar based on
+ * http://github.com/mfkahn/intouch-iCalendar based on
  * http://github.com/fangel/SG-iCalendar
  *
  * Roadmap:
- *  * Finish FREQUENCY-parsing.
- *  * Add API for recurring events
+ * - Finish FREQUENCY-parsing.
+ * - Add API for recurring events
  *
  * A simple example:
+ * <code>
  * <?php
  * use intouch\ical\iCal;
  * $ical = new iCal("http://example.com/calendar.ics");
@@ -33,8 +34,8 @@ define('SG_ICALREADER_VERSION', '0.8.0');
  *   // Do stuff with the event $event
  * }
  * ?>
+ * </code>
  *
- * @package intouch\ical
  * @author Morten Fangel (C) 2008
  * @author xonev (C) 2010
  * @author Tanguy Pruvot (C) 2010
@@ -138,6 +139,7 @@ class iCal {
 }
 
 /**
- * For legacy reasons, we keep the name iCalReader..
+ * Legacy - empty subclass of iCal
+ * @internal
  */
 class iCalReader extends iCal {}

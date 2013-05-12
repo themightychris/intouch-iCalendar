@@ -20,9 +20,8 @@ namespace intouch\ical;
  * By pushing the next period onto the stack as the last option will
  * (hopefully) remove the need for the awful simpleMode
  *
- * @package intouch\ical
  * @author Morten Fangel (C) 2008
- * @author Michael Kahn 2013
+ * @author Michael Kahn (C) 2013
  * @license http://creativecommons.org/licenses/by-sa/2.5/dk/deed.en_GB CC-BY-SA-DK
  */
 class Freq {

@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta name="generator" content="ApiGen 2.8.0" />
+
+	<title>Class intouch\ical\Factory | intouch-iCalendar</title>
+
+	<script type="text/javascript" src="resources/combined.js?2230489249"></script>
+	<script type="text/javascript" src="elementlist.js?1249410663"></script>
+	<link rel="stylesheet" type="text/css" media="all" href="resources/style.css?3505392360" />
+
+</head>
+
+<body>
+<div id="left">
+	<div id="menu">
+		<a href="index.html" title="Overview"><span>Overview</span></a>
+
+
+		<div id="groups">
+			<h3>Namespaces</h3>
+			<ul>
+				<li class="active"><a href="namespace-intouch.html">intouch<span></span></a>
+						<ul>
+				<li class="active"><a href="namespace-intouch.ical.html">ical</a>
+						</li>
+							</ul></li>
+			</ul>
+		</div>
+
+		<hr />
+
+
+		<div id="elements">
+			<h3>Classes</h3>
+			<ul>
+				<li><a href="class-intouch.ical.Duration.html">Duration</a></li>
+				<li class="active"><a href="class-intouch.ical.Factory.html">Factory</a></li>
+				<li><a href="class-intouch.ical.Freq.html">Freq</a></li>
+				<li><a href="class-intouch.ical.iCal.html">iCal</a></li>
+				<li><a href="class-intouch.ical.Line.html">Line</a></li>
+				<li><a href="class-intouch.ical.Parser.html">Parser</a></li>
+				<li><a href="class-intouch.ical.Query.html">Query</a></li>
+				<li><a href="class-intouch.ical.Recurrence.html">Recurrence</a></li>
+				<li><a href="class-intouch.ical.VCalendar.html">VCalendar</a></li>
+				<li><a href="class-intouch.ical.VEvent.html">VEvent</a></li>
+				<li><a href="class-intouch.ical.VTimeZone.html">VTimeZone</a></li>
+			</ul>
+
+
+
+
+
+		</div>
+	</div>
+</div>
+
+<div id="splitter"></div>
+
+<div id="right">
+<div id="rightInner">
+	<form id="search">
+		<input type="hidden" name="cx" value="" />
+		<input type="hidden" name="ie" value="UTF-8" />
+		<input type="text" name="q" class="text" />
+		<input type="submit" value="Search" />
+	</form>
+
+	<div id="navigation">
+		<ul>
+			<li>
+				<a href="index.html" title="Overview"><span>Overview</span></a>
+			</li>
+			<li>
+				<a href="namespace-intouch.ical.html" title="Summary of intouch\ical"><span>Namespace</span></a>
+			</li>
+			<li class="active">
+<span>Class</span>			</li>
+		</ul>
+		<ul>
+			<li>
+				<a href="tree.html" title="Tree view of classes, interfaces, traits and exceptions"><span>Tree</span></a>
+			</li>
+		</ul>
+		<ul>
+		</ul>
+	</div>
+
+<div id="content" class="class">
+	<h1>Class Factory</h1>
+
+
+	<div class="description">
+	
+<p>A simple Factory for converting a section/data pair into the corrosponding
+block-object. If the section isn't known a simple ArrayObject is used
+instead.</p>
+
+	</div>
+
+
+
+
+
+
+
+
+
+	<div class="info">
+		
+		
+		<b>Namespace:</b> <a href="namespace-intouch.html">intouch</a>\<a href="namespace-intouch.ical.html">ical</a><br />
+		
+
+				<b>License:</b>
+				<a href="http://creativecommons.org/licenses/by-sa/2.5/dk/deed.en_GB">CC-BY-SA-DK</a><br />
+				<b>Author:</b>
+				Morten Fangel (C) 2008<br />
+				<b>Author:</b>
+				Michael Kahn (C) 2013<br />
+		<b>Located at</b> <a href="source-class-intouch.ical.Factory.html#5-41" title="Go to source code">ical/Factory.php</a><br />
+	</div>
+
+
+
+	<table class="summary" id="methods">
+	<caption>Methods summary</caption>
+	<tr data-order="factory" id="_factory">
+
+		<td class="attributes"><code>
+			 public static
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_factory">#</a>
+		<code><a href="source-class-intouch.ical.Factory.html#15-40" title="Go to source code">factory</a>( <span><code><a href="class-intouch.ical.iCal.html">intouch\ical\iCal</a></code> <var>$ical</var></span>, <span>mixed <var>$section</var></span>, <span><code><a href="class-intouch.ical.Line.html">intouch\ical\Line</a>[]</code> <var>$data</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Returns a new block-object for the section/data-pair. The list of returned
+objects is:</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Returns a new block-object for the section/data-pair. The list of returned
+objects is:</p>
+
+<p>vcalendar =&gt; intouch\ical\VCalendar vtimezone =&gt; intouch\ical\VTimeZone
+vevent =&gt; intouch\ical\VEvent</p>
+
+<ul>
+	<li>=&gt; ArrayObject</li>
+</ul>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$ical</var></dt>
+					<dd><code>mixed</code><br>$ical intouch\ical\iCal The reader this section/data-pair belongs to</dd>
+					<dt><var>$section</var></dt>
+					<dd><code>mixed</code><br>$section string</dd>
+					<dt><var>$data</var></dt>
+					<dd><code><code><a href="class-intouch.ical.Line.html">intouch\ical\Line</a>[]</code></code></dd>
+				</dl></div>
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	</table>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+
+	<div id="footer">
+		intouch-iCalendar API documentation generated by <a href="http://apigen.org">ApiGen 2.8.0</a>
+	</div>
+</div>
+</div>
+</body>
+</html>

@@ -9,9 +9,8 @@ use \IteratorAggregate;
  * so you can easily query for title and description.
  * Exposes a iterator that will loop though all the data
  *
- * @package intouch\ical
  * @author Morten Fangel (C) 2008
- * @author Michael Kahn 2013
+ * @author Michael Kahn (C) 2013
  * @license http://creativecommons.org/licenses/by-sa/2.5/dk/deed.en_GB CC-BY-SA-DK
  */
 class VCalendar implements IteratorAggregate {

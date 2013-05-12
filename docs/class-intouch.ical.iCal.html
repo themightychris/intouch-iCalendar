@@ -1,0 +1,577 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta name="generator" content="ApiGen 2.8.0" />
+
+	<title>Class intouch\ical\iCal | intouch-iCalendar</title>
+
+	<script type="text/javascript" src="resources/combined.js?2230489249"></script>
+	<script type="text/javascript" src="elementlist.js?1249410663"></script>
+	<link rel="stylesheet" type="text/css" media="all" href="resources/style.css?3505392360" />
+
+</head>
+
+<body>
+<div id="left">
+	<div id="menu">
+		<a href="index.html" title="Overview"><span>Overview</span></a>
+
+
+		<div id="groups">
+			<h3>Namespaces</h3>
+			<ul>
+				<li class="active"><a href="namespace-intouch.html">intouch<span></span></a>
+						<ul>
+				<li class="active"><a href="namespace-intouch.ical.html">ical</a>
+						</li>
+							</ul></li>
+			</ul>
+		</div>
+
+		<hr />
+
+
+		<div id="elements">
+			<h3>Classes</h3>
+			<ul>
+				<li><a href="class-intouch.ical.Duration.html">Duration</a></li>
+				<li><a href="class-intouch.ical.Factory.html">Factory</a></li>
+				<li><a href="class-intouch.ical.Freq.html">Freq</a></li>
+				<li class="active"><a href="class-intouch.ical.iCal.html">iCal</a></li>
+				<li><a href="class-intouch.ical.Line.html">Line</a></li>
+				<li><a href="class-intouch.ical.Parser.html">Parser</a></li>
+				<li><a href="class-intouch.ical.Query.html">Query</a></li>
+				<li><a href="class-intouch.ical.Recurrence.html">Recurrence</a></li>
+				<li><a href="class-intouch.ical.VCalendar.html">VCalendar</a></li>
+				<li><a href="class-intouch.ical.VEvent.html">VEvent</a></li>
+				<li><a href="class-intouch.ical.VTimeZone.html">VTimeZone</a></li>
+			</ul>
+
+
+
+
+
+		</div>
+	</div>
+</div>
+
+<div id="splitter"></div>
+
+<div id="right">
+<div id="rightInner">
+	<form id="search">
+		<input type="hidden" name="cx" value="" />
+		<input type="hidden" name="ie" value="UTF-8" />
+		<input type="text" name="q" class="text" />
+		<input type="submit" value="Search" />
+	</form>
+
+	<div id="navigation">
+		<ul>
+			<li>
+				<a href="index.html" title="Overview"><span>Overview</span></a>
+			</li>
+			<li>
+				<a href="namespace-intouch.ical.html" title="Summary of intouch\ical"><span>Namespace</span></a>
+			</li>
+			<li class="active">
+<span>Class</span>			</li>
+		</ul>
+		<ul>
+			<li>
+				<a href="tree.html" title="Tree view of classes, interfaces, traits and exceptions"><span>Tree</span></a>
+			</li>
+		</ul>
+		<ul>
+		</ul>
+	</div>
+
+<div id="content" class="class">
+	<h1>Class iCal</h1>
+
+
+	<div class="description">
+	
+<p>A simple iCal parser.</p>
+
+<p><a
+href="http://github.com/mfkahn/intouch-iCalendar">http://github.com/mfkahn/intouch-iCalendar</a>
+based on <a
+href="http://github.com/fangel/SG-iCalendar">http://github.com/fangel/SG-iCalendar</a></p>
+
+<p>Roadmap:</p>
+
+<ul>
+	<li>Finish FREQUENCY-parsing.</li>
+
+	<li>Add API for recurring events</li>
+</ul>
+
+<p>A simple example:</p>
+
+<pre>
+<span class="xlang">&lt;?php</span>
+<span
+class="php-keyword1">use</span> intouch\ical\iCal;
+<span
+class="php-var">$ical</span> = <span class="php-keyword1">new</span> iCal(<span
+class="php-quote">&quot;http://example.com/calendar.ics&quot;</span>);
+<span
+class="php-keyword1">foreach</span>( <span
+class="php-var">$ical</span>-&gt;getEvents() <span
+class="php-keyword1">As</span> <span class="php-var">$event</span> ) {
+  <span
+class="php-comment">// Do stuff with the event $event</span>
+}
+<span
+class="xlang">?&gt;</span>
+</pre>
+
+	</div>
+
+
+
+
+
+
+
+
+
+	<div class="info">
+		
+		
+		<b>Namespace:</b> <a href="namespace-intouch.html">intouch</a>\<a href="namespace-intouch.ical.html">ical</a><br />
+		
+
+				<b>License:</b>
+				<a href="http://creativecommons.org/licenses/by-sa/2.5/dk/deed.en_GB">CC-BY-SA-DK</a><br />
+				<b>Author:</b>
+				Morten Fangel (C) 2008<br />
+				<b>Author:</b>
+				xonev (C) 2010<br />
+				<b>Author:</b>
+				Tanguy Pruvot (C) 2010<br />
+				<b>Author:</b>
+				Michael Kahn (C) 2013<br />
+		<b>Located at</b> <a href="source-class-intouch.ical.iCal.html#18-139" title="Go to source code">ical/iCal.php</a><br />
+	</div>
+
+
+
+	<table class="summary" id="methods">
+	<caption>Methods summary</caption>
+	<tr data-order="__construct" id="___construct">
+
+		<td class="attributes"><code>
+			 public 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#___construct">#</a>
+		<code><a href="source-class-intouch.ical.iCal.html#53-59" title="Go to source code">__construct</a>( <span>mixed <var>$url</var> = <span class="php-keyword1">false</span></span> )</code>
+
+		<div class="description short">
+			
+<p>Constructs a new iCalReader. You can supply the url now, or later using
+setUrl</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Constructs a new iCalReader. You can supply the url now, or later using
+setUrl</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$url</var></dt>
+					<dd><code>mixed</code><br>$url string</dd>
+				</dl></div>
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="setUrl" id="_setUrl">
+
+		<td class="attributes"><code>
+			 public 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_setUrl">#</a>
+		<code><a href="source-class-intouch.ical.iCal.html#61-69" title="Go to source code">setUrl</a>( <span>mixed <var>$url</var> = <span class="php-keyword1">false</span> </span> )</code>
+
+		<div class="description short">
+			
+<p>Sets (or resets) the url this reader reads from.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Sets (or resets) the url this reader reads from.</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$url</var></dt>
+					<dd><code>mixed</code><br>$url string</dd>
+				</dl></div>
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="getCalendarInfo" id="_getCalendarInfo">
+
+		<td class="attributes"><code>
+			 public 
+			<code><a href="class-intouch.ical.VCalendar.html">intouch\ical\VCalendar</a></code>
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_getCalendarInfo">#</a>
+		<code><a href="source-class-intouch.ical.iCal.html#71-78" title="Go to source code">getCalendarInfo</a>( )</code>
+
+		<div class="description short">
+			
+<p>Returns the main calendar info. You can then query the returned object with
+ie getTitle().</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Returns the main calendar info. You can then query the returned object with
+ie getTitle().</p>
+
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code><code><a href="class-intouch.ical.VCalendar.html">intouch\ical\VCalendar</a></code></code><br />
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="setCalendarInfo" id="_setCalendarInfo">
+
+		<td class="attributes"><code>
+			 public 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_setCalendarInfo">#</a>
+		<code><a href="source-class-intouch.ical.iCal.html#80-86" title="Go to source code">setCalendarInfo</a>( <span><code><a href="class-intouch.ical.VCalendar.html">intouch\ical\VCalendar</a></code> <var>$info</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Sets the calendar info for this calendar</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Sets the calendar info for this calendar</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$info</var></dt>
+					<dd><code><code><a href="class-intouch.ical.VCalendar.html">intouch\ical\VCalendar</a></code></code><br>$info</dd>
+				</dl></div>
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="getTimeZoneInfo" id="_getTimeZoneInfo">
+
+		<td class="attributes"><code>
+			 public 
+			<code><a href="class-intouch.ical.VTimeZone.html">intouch\ical\VTimeZone</a></code>
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_getTimeZoneInfo">#</a>
+		<code><a href="source-class-intouch.ical.iCal.html#89-114" title="Go to source code">getTimeZoneInfo</a>( <span>mixed <var>$tzid</var> = <span class="php-keyword1">null</span> </span> )</code>
+
+		<div class="description short">
+			
+<p>Returns a given timezone for the calendar. This is mainly used by VEvents to
+adjust their date-times if they have specified a timezone.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Returns a given timezone for the calendar. This is mainly used by VEvents to
+adjust their date-times if they have specified a timezone.</p>
+
+<p>If no timezone is given, all timezones in the calendar is returned.</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$tzid</var></dt>
+					<dd><code>mixed</code><br>$tzid string</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code><code><a href="class-intouch.ical.VTimeZone.html">intouch\ical\VTimeZone</a></code></code><br />
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="addTimeZone" id="_addTimeZone">
+
+		<td class="attributes"><code>
+			 public 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_addTimeZone">#</a>
+		<code><a href="source-class-intouch.ical.iCal.html#116-122" title="Go to source code">addTimeZone</a>( <span><code><a href="class-intouch.ical.VTimeZone.html">intouch\ical\VTimeZone</a></code> <var>$tz</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Adds a new timezone to this calendar</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Adds a new timezone to this calendar</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$tz</var></dt>
+					<dd><code><code><a href="class-intouch.ical.VTimeZone.html">intouch\ical\VTimeZone</a></code></code><br>$tz</dd>
+				</dl></div>
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="getEvents" id="_getEvents">
+
+		<td class="attributes"><code>
+			 public 
+			array
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_getEvents">#</a>
+		<code><a href="source-class-intouch.ical.iCal.html#124-130" title="Go to source code">getEvents</a>( )</code>
+
+		<div class="description short">
+			
+<p>Returns the events found</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Returns the events found</p>
+
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>array</code><br />
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="addEvent" id="_addEvent">
+
+		<td class="attributes"><code>
+			 public 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_addEvent">#</a>
+		<code><a href="source-class-intouch.ical.iCal.html#132-138" title="Go to source code">addEvent</a>( <span><code><a href="class-intouch.ical.VEvent.html">intouch\ical\VEvent</a></code> <var>$event</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Adds a event to this calendar</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Adds a event to this calendar</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$event</var></dt>
+					<dd><code><code><a href="class-intouch.ical.VEvent.html">intouch\ical\VEvent</a></code></code><br>$event</dd>
+				</dl></div>
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	</table>
+
+
+
+
+
+
+
+
+
+
+
+
+	<table class="summary" id="properties">
+	<caption>Properties summary</caption>
+	<tr data-order="information" id="$information">
+		<td class="attributes"><code>
+			public  
+			mixed
+		</code></td>
+
+		<td class="name">
+				<a href="source-class-intouch.ical.iCal.html#48" title="Go to source code"><var>$information</var></a>
+		</td>
+		<td class="value"><code></code></td>
+		<td class="description"><div>
+			<a href="#$information" class="anchor">#</a>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+			</div>
+		</div></td>
+	</tr>
+	<tr data-order="timezones" id="$timezones">
+		<td class="attributes"><code>
+			public  
+			mixed
+		</code></td>
+
+		<td class="name">
+				<a href="source-class-intouch.ical.iCal.html#49" title="Go to source code"><var>$timezones</var></a>
+		</td>
+		<td class="value"><code></code></td>
+		<td class="description"><div>
+			<a href="#$timezones" class="anchor">#</a>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+			</div>
+		</div></td>
+	</tr>
+	<tr data-order="events" id="$events">
+		<td class="attributes"><code>
+			protected  
+			mixed
+		</code></td>
+
+		<td class="name">
+				<a href="source-class-intouch.ical.iCal.html#51" title="Go to source code"><var>$events</var></a>
+		</td>
+		<td class="value"><code></code></td>
+		<td class="description"><div>
+			<a href="#$events" class="anchor">#</a>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+			</div>
+		</div></td>
+	</tr>
+	</table>
+
+
+
+
+
+
+</div>
+
+	<div id="footer">
+		intouch-iCalendar API documentation generated by <a href="http://apigen.org">ApiGen 2.8.0</a>
+	</div>
+</div>
+</div>
+</body>
+</html>

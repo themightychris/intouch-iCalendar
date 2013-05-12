@@ -1,0 +1,740 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta name="generator" content="ApiGen 2.8.0" />
+
+	<title>Class intouch\ical\Freq | intouch-iCalendar</title>
+
+	<script type="text/javascript" src="resources/combined.js?2230489249"></script>
+	<script type="text/javascript" src="elementlist.js?1249410663"></script>
+	<link rel="stylesheet" type="text/css" media="all" href="resources/style.css?3505392360" />
+
+</head>
+
+<body>
+<div id="left">
+	<div id="menu">
+		<a href="index.html" title="Overview"><span>Overview</span></a>
+
+
+		<div id="groups">
+			<h3>Namespaces</h3>
+			<ul>
+				<li class="active"><a href="namespace-intouch.html">intouch<span></span></a>
+						<ul>
+				<li class="active"><a href="namespace-intouch.ical.html">ical</a>
+						</li>
+							</ul></li>
+			</ul>
+		</div>
+
+		<hr />
+
+
+		<div id="elements">
+			<h3>Classes</h3>
+			<ul>
+				<li><a href="class-intouch.ical.Duration.html">Duration</a></li>
+				<li><a href="class-intouch.ical.Factory.html">Factory</a></li>
+				<li class="active"><a href="class-intouch.ical.Freq.html">Freq</a></li>
+				<li><a href="class-intouch.ical.iCal.html">iCal</a></li>
+				<li><a href="class-intouch.ical.Line.html">Line</a></li>
+				<li><a href="class-intouch.ical.Parser.html">Parser</a></li>
+				<li><a href="class-intouch.ical.Query.html">Query</a></li>
+				<li><a href="class-intouch.ical.Recurrence.html">Recurrence</a></li>
+				<li><a href="class-intouch.ical.VCalendar.html">VCalendar</a></li>
+				<li><a href="class-intouch.ical.VEvent.html">VEvent</a></li>
+				<li><a href="class-intouch.ical.VTimeZone.html">VTimeZone</a></li>
+			</ul>
+
+
+
+
+
+		</div>
+	</div>
+</div>
+
+<div id="splitter"></div>
+
+<div id="right">
+<div id="rightInner">
+	<form id="search">
+		<input type="hidden" name="cx" value="" />
+		<input type="hidden" name="ie" value="UTF-8" />
+		<input type="text" name="q" class="text" />
+		<input type="submit" value="Search" />
+	</form>
+
+	<div id="navigation">
+		<ul>
+			<li>
+				<a href="index.html" title="Overview"><span>Overview</span></a>
+			</li>
+			<li>
+				<a href="namespace-intouch.ical.html" title="Summary of intouch\ical"><span>Namespace</span></a>
+			</li>
+			<li class="active">
+<span>Class</span>			</li>
+		</ul>
+		<ul>
+			<li>
+				<a href="tree.html" title="Tree view of classes, interfaces, traits and exceptions"><span>Tree</span></a>
+			</li>
+		</ul>
+		<ul>
+		</ul>
+	</div>
+
+<div id="content" class="class">
+	<h1>Class Freq</h1>
+
+
+	<div class="description">
+	
+<p>A class to store Frequency-rules in. Will allow a easy way to find the last
+and next occurrence of the rule.</p>
+
+<p>No - this is so not pretty. But.. ehh.. You do it better, and I will gladly
+accept patches.</p>
+
+<p>Created by trail-and-error on the examples given in the RFC.</p>
+
+<p>TODO: Update to a better way of doing calculating the different options.
+Instead of only keeping track of the best of the current dates found it should
+instead keep a array of all the calculated dates within the period. This should
+fix the issues with multi-rule + multi-rule interference, and make it possible
+to implement the SETPOS rule. By pushing the next period onto the stack as the
+last option will (hopefully) remove the need for the awful simpleMode</p>
+
+	</div>
+
+
+
+
+
+
+
+
+
+	<div class="info">
+		
+		
+		<b>Namespace:</b> <a href="namespace-intouch.html">intouch</a>\<a href="namespace-intouch.ical.html">ical</a><br />
+		
+
+				<b>License:</b>
+				<a href="http://creativecommons.org/licenses/by-sa/2.5/dk/deed.en_GB">CC-BY-SA-DK</a><br />
+				<b>Author:</b>
+				Morten Fangel (C) 2008<br />
+				<b>Author:</b>
+				Michael Kahn (C) 2013<br />
+		<b>Located at</b> <a href="source-class-intouch.ical.Freq.html#5-556" title="Go to source code">ical/Freq.php</a><br />
+	</div>
+
+
+
+	<table class="summary" id="methods">
+	<caption>Methods summary</caption>
+	<tr data-order="__construct" id="___construct">
+
+		<td class="attributes"><code>
+			 public 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#___construct">#</a>
+		<code><a href="source-class-intouch.ical.Freq.html#42-105" title="Go to source code">__construct</a>( <span>mixed <var>$rule</var></span>, <span>mixed <var>$start</var></span>, <span>mixed <var>$excluded</var> = <span class="php-keyword1">array</span>()</span>, <span>mixed <var>$added</var> = <span class="php-keyword1">array</span>()</span> )</code>
+
+		<div class="description short">
+			
+<p>Constructs a new Freqency-rule</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Constructs a new Freqency-rule</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$rule</var></dt>
+					<dd><code>mixed</code><br>$rule string</dd>
+					<dt><var>$start</var></dt>
+					<dd><code>mixed</code><br>$start int Unix-timestamp (important : Need to be the start of Event)</dd>
+					<dt><var>$excluded</var></dt>
+					<dd><code>mixed</code><br>$excluded array of int (timestamps), see EXDATE documentation</dd>
+					<dt><var>$added</var></dt>
+					<dd><code>mixed</code><br>$added array of int (timestamps), see RDATE documentation</dd>
+				</dl></div>
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="getAllOccurrences" id="_getAllOccurrences">
+
+		<td class="attributes"><code>
+			 public 
+			array
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_getAllOccurrences">#</a>
+		<code><a href="source-class-intouch.ical.Freq.html#108-127" title="Go to source code">getAllOccurrences</a>( )</code>
+
+		<div class="description short">
+			
+<p>Returns all timestamps array(), build the cache if not made before</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Returns all timestamps array(), build the cache if not made before</p>
+
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>array</code><br />
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="previousOccurrence" id="_previousOccurrence">
+
+		<td class="attributes"><code>
+			 public 
+			integer
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_previousOccurrence">#</a>
+		<code><a href="source-class-intouch.ical.Freq.html#129-153" title="Go to source code">previousOccurrence</a>( <span>integer <var>$offset</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Returns the previous (most recent) occurrence of the rule from the given
+offset</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Returns the previous (most recent) occurrence of the rule from the given
+offset</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$offset</var></dt>
+					<dd><code>integer</code><br>$offset</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>integer</code><br />
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="nextOccurrence" id="_nextOccurrence">
+
+		<td class="attributes"><code>
+			 public 
+			integer
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_nextOccurrence">#</a>
+		<code><a href="source-class-intouch.ical.Freq.html#155-164" title="Go to source code">nextOccurrence</a>( <span>integer <var>$offset</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Returns the next occurrence of this rule after the given offset</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Returns the next occurrence of this rule after the given offset</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$offset</var></dt>
+					<dd><code>integer</code><br>$offset</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>integer</code><br />
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="firstOccurrence" id="_firstOccurrence">
+
+		<td class="attributes"><code>
+			 public 
+			integer
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_firstOccurrence">#</a>
+		<code><a href="source-class-intouch.ical.Freq.html#166-175" title="Go to source code">firstOccurrence</a>( )</code>
+
+		<div class="description short">
+			
+<p>Finds the first occurrence of the rule.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Finds the first occurrence of the rule.</p>
+
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>integer</code><br>timestamp<br />
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="lastOccurrence" id="_lastOccurrence">
+
+		<td class="attributes"><code>
+			 public 
+			integer
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_lastOccurrence">#</a>
+		<code><a href="source-class-intouch.ical.Freq.html#177-187" title="Go to source code">lastOccurrence</a>( )</code>
+
+		<div class="description short">
+			
+<p>Finds the absolute last occurrence of the rule from the given offset. Builds
+also the cache, if not set before...</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Finds the absolute last occurrence of the rule from the given offset. Builds
+also the cache, if not set before...</p>
+
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>integer</code><br>timestamp<br />
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="findNext" id="_findNext">
+
+		<td class="attributes"><code>
+			 public 
+			integer
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_findNext">#</a>
+		<code><a href="source-class-intouch.ical.Freq.html#189-297" title="Go to source code">findNext</a>( <span>integer <var>$offset</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Calculates the next time after the given offset that the rule will apply.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Calculates the next time after the given offset that the rule will apply.</p>
+
+<p>The approach to finding the next is as follows: First we establish a
+timeframe to find timestamps in. This is between $offset and the end of the
+period that $offset is in.</p>
+
+<p>We then loop though all the rules (that is a Prerule in the current freq.),
+and finds the smallest timestamp inside the timeframe.</p>
+
+<p>If we find something, we check if the date is a valid recurrence (with
+validDate). If it is, we return it. Otherwise we try to find a new date inside
+the same timeframe (but using the new- found date as offset)</p>
+
+<p>If no new timestamps were found in the period, we try in the next period</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$offset</var></dt>
+					<dd><code>integer</code><br>$offset</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>integer</code><br />
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="findEndOfPeriod" id="_findEndOfPeriod">
+
+		<td class="attributes"><code>
+			 public 
+			integer
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_findEndOfPeriod">#</a>
+		<code><a href="source-class-intouch.ical.Freq.html#326-333" title="Go to source code">findEndOfPeriod</a>( <span>integer <var>$offset</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Finds the earliest timestamp posible outside this perioid</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Finds the earliest timestamp posible outside this perioid</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$offset</var></dt>
+					<dd><code>integer</code><br>$offset</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>integer</code><br />
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	</table>
+
+
+
+
+
+
+
+
+
+
+
+
+	<table class="summary" id="properties">
+	<caption>Properties summary</caption>
+	<tr data-order="weekdays" id="$weekdays">
+		<td class="attributes"><code>
+			protected  
+			array
+		</code></td>
+
+		<td class="name">
+				<a href="source-class-intouch.ical.Freq.html#28" title="Go to source code"><var>$weekdays</var></a>
+		</td>
+		<td class="value"><code><span class="php-keyword1">array</span>(<span class="php-quote">'MO'</span>=&gt;<span class="php-quote">'monday'</span>, <span class="php-quote">'TU'</span>=&gt;<span class="php-quote">'tuesday'</span>, <span class="php-quote">'WE'</span>=&gt;<span class="php-quote">'wednesday'</span>, <span class="php-quote">'TH'</span>=&gt;<span class="php-quote">'thursday'</span>, <span class="php-quote">'FR'</span>=&gt;<span class="php-quote">'friday'</span>, <span class="php-quote">'SA'</span>=&gt;<span class="php-quote">'saturday'</span>, <span class="php-quote">'SU'</span>=&gt;<span class="php-quote">'sunday'</span>)</code></td>
+		<td class="description"><div>
+			<a href="#$weekdays" class="anchor">#</a>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+			</div>
+		</div></td>
+	</tr>
+	<tr data-order="knownRules" id="$knownRules">
+		<td class="attributes"><code>
+			protected  
+			array
+		</code></td>
+
+		<td class="name">
+				<a href="source-class-intouch.ical.Freq.html#29" title="Go to source code"><var>$knownRules</var></a>
+		</td>
+		<td class="value"><code><span class="php-keyword1">array</span>(<span class="php-quote">'month'</span>, <span class="php-quote">'weekno'</span>, <span class="php-quote">'day'</span>, <span class="php-quote">'monthday'</span>, <span class="php-quote">'yearday'</span>, <span class="php-quote">'hour'</span>, <span class="php-quote">'minute'</span>)</code></td>
+		<td class="description"><div>
+			<a href="#$knownRules" class="anchor">#</a>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+			</div>
+		</div></td>
+	</tr>
+	<tr data-order="ruleModifiers" id="$ruleModifiers">
+		<td class="attributes"><code>
+			protected  
+			array
+		</code></td>
+
+		<td class="name">
+				<a href="source-class-intouch.ical.Freq.html#30" title="Go to source code"><var>$ruleModifiers</var></a>
+		</td>
+		<td class="value"><code><span class="php-keyword1">array</span>(<span class="php-quote">'wkst'</span>)</code></td>
+		<td class="description"><div>
+			<a href="#$ruleModifiers" class="anchor">#</a>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+			</div>
+		</div></td>
+	</tr>
+	<tr data-order="simpleMode" id="$simpleMode">
+		<td class="attributes"><code>
+			protected  
+			boolean
+		</code></td>
+
+		<td class="name">
+				<a href="source-class-intouch.ical.Freq.html#31" title="Go to source code"><var>$simpleMode</var></a>
+		</td>
+		<td class="value"><code><span class="php-keyword1">true</span></code></td>
+		<td class="description"><div>
+			<a href="#$simpleMode" class="anchor">#</a>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+			</div>
+		</div></td>
+	</tr>
+	<tr data-order="rules" id="$rules">
+		<td class="attributes"><code>
+			protected  
+			array
+		</code></td>
+
+		<td class="name">
+				<a href="source-class-intouch.ical.Freq.html#33" title="Go to source code"><var>$rules</var></a>
+		</td>
+		<td class="value"><code><span class="php-keyword1">array</span>(<span class="php-quote">'freq'</span>=&gt;<span class="php-quote">'yearly'</span>, <span class="php-quote">'interval'</span>=&gt;<span class="php-num">1</span>)</code></td>
+		<td class="description"><div>
+			<a href="#$rules" class="anchor">#</a>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+			</div>
+		</div></td>
+	</tr>
+	<tr data-order="start" id="$start">
+		<td class="attributes"><code>
+			protected  
+			integer
+		</code></td>
+
+		<td class="name">
+				<a href="source-class-intouch.ical.Freq.html#34" title="Go to source code"><var>$start</var></a>
+		</td>
+		<td class="value"><code><span class="php-num">0</span></code></td>
+		<td class="description"><div>
+			<a href="#$start" class="anchor">#</a>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+			</div>
+		</div></td>
+	</tr>
+	<tr data-order="freq" id="$freq">
+		<td class="attributes"><code>
+			protected  
+			string
+		</code></td>
+
+		<td class="name">
+				<a href="source-class-intouch.ical.Freq.html#35" title="Go to source code"><var>$freq</var></a>
+		</td>
+		<td class="value"><code><span class="php-quote">''</span></code></td>
+		<td class="description"><div>
+			<a href="#$freq" class="anchor">#</a>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+			</div>
+		</div></td>
+	</tr>
+	<tr data-order="excluded" id="$excluded">
+		<td class="attributes"><code>
+			protected  
+			mixed
+		</code></td>
+
+		<td class="name">
+				<a href="source-class-intouch.ical.Freq.html#37" title="Go to source code"><var>$excluded</var></a>
+		</td>
+		<td class="value"><code></code></td>
+		<td class="description"><div>
+			<a href="#$excluded" class="anchor">#</a>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+			</div>
+		</div></td>
+	</tr>
+	<tr data-order="added" id="$added">
+		<td class="attributes"><code>
+			protected  
+			mixed
+		</code></td>
+
+		<td class="name">
+				<a href="source-class-intouch.ical.Freq.html#38" title="Go to source code"><var>$added</var></a>
+		</td>
+		<td class="value"><code></code></td>
+		<td class="description"><div>
+			<a href="#$added" class="anchor">#</a>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+			</div>
+		</div></td>
+	</tr>
+	<tr data-order="cache" id="$cache">
+		<td class="attributes"><code>
+			protected  
+			mixed
+		</code></td>
+
+		<td class="name">
+				<a href="source-class-intouch.ical.Freq.html#40" title="Go to source code"><var>$cache</var></a>
+		</td>
+		<td class="value"><code></code></td>
+		<td class="description"><div>
+			<a href="#$cache" class="anchor">#</a>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+			</div>
+		</div></td>
+	</tr>
+	</table>
+
+
+
+
+
+
+</div>
+
+	<div id="footer">
+		intouch-iCalendar API documentation generated by <a href="http://apigen.org">ApiGen 2.8.0</a>
+	</div>
+</div>
+</div>
+</body>
+</html>

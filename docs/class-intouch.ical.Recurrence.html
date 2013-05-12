@@ -1,0 +1,1222 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta name="generator" content="ApiGen 2.8.0" />
+
+	<title>Class intouch\ical\Recurrence | intouch-iCalendar</title>
+
+	<script type="text/javascript" src="resources/combined.js?2230489249"></script>
+	<script type="text/javascript" src="elementlist.js?1249410663"></script>
+	<link rel="stylesheet" type="text/css" media="all" href="resources/style.css?3505392360" />
+
+</head>
+
+<body>
+<div id="left">
+	<div id="menu">
+		<a href="index.html" title="Overview"><span>Overview</span></a>
+
+
+		<div id="groups">
+			<h3>Namespaces</h3>
+			<ul>
+				<li class="active"><a href="namespace-intouch.html">intouch<span></span></a>
+						<ul>
+				<li class="active"><a href="namespace-intouch.ical.html">ical</a>
+						</li>
+							</ul></li>
+			</ul>
+		</div>
+
+		<hr />
+
+
+		<div id="elements">
+			<h3>Classes</h3>
+			<ul>
+				<li><a href="class-intouch.ical.Duration.html">Duration</a></li>
+				<li><a href="class-intouch.ical.Factory.html">Factory</a></li>
+				<li><a href="class-intouch.ical.Freq.html">Freq</a></li>
+				<li><a href="class-intouch.ical.iCal.html">iCal</a></li>
+				<li><a href="class-intouch.ical.Line.html">Line</a></li>
+				<li><a href="class-intouch.ical.Parser.html">Parser</a></li>
+				<li><a href="class-intouch.ical.Query.html">Query</a></li>
+				<li class="active"><a href="class-intouch.ical.Recurrence.html">Recurrence</a></li>
+				<li><a href="class-intouch.ical.VCalendar.html">VCalendar</a></li>
+				<li><a href="class-intouch.ical.VEvent.html">VEvent</a></li>
+				<li><a href="class-intouch.ical.VTimeZone.html">VTimeZone</a></li>
+			</ul>
+
+
+
+
+
+		</div>
+	</div>
+</div>
+
+<div id="splitter"></div>
+
+<div id="right">
+<div id="rightInner">
+	<form id="search">
+		<input type="hidden" name="cx" value="" />
+		<input type="hidden" name="ie" value="UTF-8" />
+		<input type="text" name="q" class="text" />
+		<input type="submit" value="Search" />
+	</form>
+
+	<div id="navigation">
+		<ul>
+			<li>
+				<a href="index.html" title="Overview"><span>Overview</span></a>
+			</li>
+			<li>
+				<a href="namespace-intouch.ical.html" title="Summary of intouch\ical"><span>Namespace</span></a>
+			</li>
+			<li class="active">
+<span>Class</span>			</li>
+		</ul>
+		<ul>
+			<li>
+				<a href="tree.html" title="Tree view of classes, interfaces, traits and exceptions"><span>Tree</span></a>
+			</li>
+		</ul>
+		<ul>
+		</ul>
+	</div>
+
+<div id="content" class="class">
+	<h1>Class Recurrence</h1>
+
+
+	<div class="description">
+	
+<p>A wrapper for recurrence rules in iCalendar. Parses the given line and puts
+the recurrence rules in the correct field of this object.</p>
+
+<p>See <a
+href="http://tools.ietf.org/html/rfc2445">http://tools.ietf.org/html/rfc2445</a>
+for more information. Page 39 and onward contains more information on the
+recurrence rules themselves. Page 116 and onward contains some great examples
+which were often used for testing.</p>
+
+	</div>
+
+
+
+
+
+
+
+
+
+	<div class="info">
+		
+		
+		<b>Namespace:</b> <a href="namespace-intouch.html">intouch</a>\<a href="namespace-intouch.ical.html">ical</a><br />
+		
+
+				<b>License:</b>
+				<a href="http://creativecommons.org/licenses/by-sa/2.5/dk/deed.en_GB">CC-BY-SA-DK</a><br />
+				<b>Author:</b>
+				Steven Oxley<br />
+				<b>Author:</b>
+				Michael Kahn (C) 2013<br />
+		<b>Located at</b> <a href="source-class-intouch.ical.Recurrence.html#7-225" title="Go to source code">ical/Recurrence.php</a><br />
+	</div>
+
+
+
+	<table class="summary" id="methods">
+	<caption>Methods summary</caption>
+	<tr data-order="__construct" id="___construct">
+
+		<td class="attributes"><code>
+			 public 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#___construct">#</a>
+		<code><a href="source-class-intouch.ical.Recurrence.html#50-57" title="Go to source code">__construct</a>( <span><code><a href="class-intouch.ical.Line.html">intouch\ical\Line</a></code> <var>$line</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Creates an recurrence object with a passed in line. Parses the line.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Creates an recurrence object with a passed in line. Parses the line.</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$line</var></dt>
+					<dd><code>object</code><br>$line an intouch\ical\Line object which will be parsed to get the desired
+information.</dd>
+				</dl></div>
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="parseLine" id="_parseLine">
+
+		<td class="attributes"><code>
+			 protected 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_parseLine">#</a>
+		<code><a href="source-class-intouch.ical.Recurrence.html#59-86" title="Go to source code">parseLine</a>( <span>string <var>$line</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Parses an 'RRULE' line and sets the member variables of this object. Expects
+a string that looks like this: 'FREQ=WEEKLY;INTERVAL=2;BYDAY=SU,TU,WE'</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Parses an 'RRULE' line and sets the member variables of this object. Expects
+a string that looks like this: 'FREQ=WEEKLY;INTERVAL=2;BYDAY=SU,TU,WE'</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$line</var></dt>
+					<dd><code>string</code><br>$line the line to be parsed</dd>
+				</dl></div>
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="setUntil" id="_setUntil">
+
+		<td class="attributes"><code>
+			 public 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_setUntil">#</a>
+		<code><a href="source-class-intouch.ical.Recurrence.html#88-98" title="Go to source code">setUntil</a>( <span>mixed <var>$ts</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Set the $until member</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Set the $until member</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$ts</var></dt>
+					<dd><code>mixed</code><br>timestamp (int) / Valid DateTime format (string)</dd>
+				</dl></div>
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="getMember" id="_getMember">
+
+		<td class="attributes"><code>
+			 protected 
+			mixed
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_getMember">#</a>
+		<code><a href="source-class-intouch.ical.Recurrence.html#100-111" title="Go to source code">getMember</a>( <span>string <var>$member</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Retrieves the desired member variable and returns it (if it's set)</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Retrieves the desired member variable and returns it (if it's set)</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$member</var></dt>
+					<dd><code>string</code><br>$member name of the member variable</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>mixed</code><br>the variable value (if set), false otherwise<br />
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="getFreq" id="_getFreq">
+
+		<td class="attributes"><code>
+			 public 
+			mixed
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_getFreq">#</a>
+		<code><a href="source-class-intouch.ical.Recurrence.html#113-119" title="Go to source code">getFreq</a>( )</code>
+
+		<div class="description short">
+			
+<p>Returns the frequency - corresponds to FREQ in RFC 2445.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Returns the frequency - corresponds to FREQ in RFC 2445.</p>
+
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>mixed</code><br>string if the member has been set, false otherwise<br />
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="getUntil" id="_getUntil">
+
+		<td class="attributes"><code>
+			 public 
+			mixed
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_getUntil">#</a>
+		<code><a href="source-class-intouch.ical.Recurrence.html#121-127" title="Go to source code">getUntil</a>( )</code>
+
+		<div class="description short">
+			
+<p>Returns when the event will go until - corresponds to UNTIL in RFC 2445.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Returns when the event will go until - corresponds to UNTIL in RFC 2445.</p>
+
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>mixed</code><br>string if the member has been set, false otherwise<br />
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="getCount" id="_getCount">
+
+		<td class="attributes"><code>
+			 public 
+			mixed
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_getCount">#</a>
+		<code><a href="source-class-intouch.ical.Recurrence.html#129-136" title="Go to source code">getCount</a>( )</code>
+
+		<div class="description short">
+			
+<p>Returns the count of the times the event will occur (should only appear if
+'until' does not appear) - corresponds to COUNT in RFC 2445.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Returns the count of the times the event will occur (should only appear if
+'until' does not appear) - corresponds to COUNT in RFC 2445.</p>
+
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>mixed</code><br>string if the member has been set, false otherwise<br />
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="getInterval" id="_getInterval">
+
+		<td class="attributes"><code>
+			 public 
+			mixed
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_getInterval">#</a>
+		<code><a href="source-class-intouch.ical.Recurrence.html#138-144" title="Go to source code">getInterval</a>( )</code>
+
+		<div class="description short">
+			
+<p>Returns the interval - corresponds to INTERVAL in RFC 2445.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Returns the interval - corresponds to INTERVAL in RFC 2445.</p>
+
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>mixed</code><br>string if the member has been set, false otherwise<br />
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="getBySecond" id="_getBySecond">
+
+		<td class="attributes"><code>
+			 public 
+			mixed
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_getBySecond">#</a>
+		<code><a href="source-class-intouch.ical.Recurrence.html#146-152" title="Go to source code">getBySecond</a>( )</code>
+
+		<div class="description short">
+			
+<p>Returns the bysecond part of the event - corresponds to BYSECOND in RFC
+2445.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Returns the bysecond part of the event - corresponds to BYSECOND in RFC
+2445.</p>
+
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>mixed</code><br>string if the member has been set, false otherwise<br />
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="getByMinute" id="_getByMinute">
+
+		<td class="attributes"><code>
+			 public 
+			mixed
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_getByMinute">#</a>
+		<code><a href="source-class-intouch.ical.Recurrence.html#154-160" title="Go to source code">getByMinute</a>( )</code>
+
+		<div class="description short">
+			
+<p>Returns the byminute information for the event - corresponds to BYMINUTE in
+RFC 2445.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Returns the byminute information for the event - corresponds to BYMINUTE in
+RFC 2445.</p>
+
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>mixed</code><br>string if the member has been set, false otherwise<br />
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="getByHour" id="_getByHour">
+
+		<td class="attributes"><code>
+			 public 
+			mixed
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_getByHour">#</a>
+		<code><a href="source-class-intouch.ical.Recurrence.html#162-168" title="Go to source code">getByHour</a>( )</code>
+
+		<div class="description short">
+			
+<p>Corresponds to BYHOUR in RFC 2445.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Corresponds to BYHOUR in RFC 2445.</p>
+
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>mixed</code><br>string if the member has been set, false otherwise<br />
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="getByDay" id="_getByDay">
+
+		<td class="attributes"><code>
+			 public 
+			mixed
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_getByDay">#</a>
+		<code><a href="source-class-intouch.ical.Recurrence.html#170-176" title="Go to source code">getByDay</a>( )</code>
+
+		<div class="description short">
+			
+<p>Corresponds to BYDAY in RFC 2445.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Corresponds to BYDAY in RFC 2445.</p>
+
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>mixed</code><br>string if the member has been set, false otherwise<br />
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="getByMonthDay" id="_getByMonthDay">
+
+		<td class="attributes"><code>
+			 public 
+			mixed
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_getByMonthDay">#</a>
+		<code><a href="source-class-intouch.ical.Recurrence.html#178-184" title="Go to source code">getByMonthDay</a>( )</code>
+
+		<div class="description short">
+			
+<p>Corresponds to BYMONTHDAY in RFC 2445.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Corresponds to BYMONTHDAY in RFC 2445.</p>
+
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>mixed</code><br>string if the member has been set, false otherwise<br />
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="getByYearDay" id="_getByYearDay">
+
+		<td class="attributes"><code>
+			 public 
+			mixed
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_getByYearDay">#</a>
+		<code><a href="source-class-intouch.ical.Recurrence.html#186-192" title="Go to source code">getByYearDay</a>( )</code>
+
+		<div class="description short">
+			
+<p>Corresponds to BYYEARDAY in RFC 2445.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Corresponds to BYYEARDAY in RFC 2445.</p>
+
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>mixed</code><br>string if the member has been set, false otherwise<br />
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="getByWeekNo" id="_getByWeekNo">
+
+		<td class="attributes"><code>
+			 public 
+			mixed
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_getByWeekNo">#</a>
+		<code><a href="source-class-intouch.ical.Recurrence.html#194-200" title="Go to source code">getByWeekNo</a>( )</code>
+
+		<div class="description short">
+			
+<p>Corresponds to BYWEEKNO in RFC 2445.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Corresponds to BYWEEKNO in RFC 2445.</p>
+
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>mixed</code><br>string if the member has been set, false otherwise<br />
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="getByMonth" id="_getByMonth">
+
+		<td class="attributes"><code>
+			 public 
+			mixed
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_getByMonth">#</a>
+		<code><a href="source-class-intouch.ical.Recurrence.html#202-208" title="Go to source code">getByMonth</a>( )</code>
+
+		<div class="description short">
+			
+<p>Corresponds to BYMONTH in RFC 2445.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Corresponds to BYMONTH in RFC 2445.</p>
+
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>mixed</code><br>string if the member has been set, false otherwise<br />
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="getBySetPos" id="_getBySetPos">
+
+		<td class="attributes"><code>
+			 public 
+			mixed
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_getBySetPos">#</a>
+		<code><a href="source-class-intouch.ical.Recurrence.html#210-216" title="Go to source code">getBySetPos</a>( )</code>
+
+		<div class="description short">
+			
+<p>Corresponds to BYSETPOS in RFC 2445.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Corresponds to BYSETPOS in RFC 2445.</p>
+
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>mixed</code><br>string if the member has been set, false otherwise<br />
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="getWkst" id="_getWkst">
+
+		<td class="attributes"><code>
+			 public 
+			mixed
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_getWkst">#</a>
+		<code><a href="source-class-intouch.ical.Recurrence.html#218-224" title="Go to source code">getWkst</a>( )</code>
+
+		<div class="description short">
+			
+<p>Corresponds to WKST in RFC 2445.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Corresponds to WKST in RFC 2445.</p>
+
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>mixed</code><br>string if the member has been set, false otherwise<br />
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	</table>
+
+
+
+
+
+
+
+
+
+
+
+
+	<table class="summary" id="properties">
+	<caption>Properties summary</caption>
+	<tr data-order="rrule" id="$rrule">
+		<td class="attributes"><code>
+			public  
+			mixed
+		</code></td>
+
+		<td class="name">
+				<a href="source-class-intouch.ical.Recurrence.html#21" title="Go to source code"><var>$rrule</var></a>
+		</td>
+		<td class="value"><code></code></td>
+		<td class="description"><div>
+			<a href="#$rrule" class="anchor">#</a>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+			</div>
+		</div></td>
+	</tr>
+	<tr data-order="freq" id="$freq">
+		<td class="attributes"><code>
+			protected  
+			mixed
+		</code></td>
+
+		<td class="name">
+				<a href="source-class-intouch.ical.Recurrence.html#23" title="Go to source code"><var>$freq</var></a>
+		</td>
+		<td class="value"><code></code></td>
+		<td class="description"><div>
+			<a href="#$freq" class="anchor">#</a>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+			</div>
+		</div></td>
+	</tr>
+	<tr data-order="until" id="$until">
+		<td class="attributes"><code>
+			protected  
+			mixed
+		</code></td>
+
+		<td class="name">
+				<a href="source-class-intouch.ical.Recurrence.html#25" title="Go to source code"><var>$until</var></a>
+		</td>
+		<td class="value"><code></code></td>
+		<td class="description"><div>
+			<a href="#$until" class="anchor">#</a>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+			</div>
+		</div></td>
+	</tr>
+	<tr data-order="count" id="$count">
+		<td class="attributes"><code>
+			protected  
+			mixed
+		</code></td>
+
+		<td class="name">
+				<a href="source-class-intouch.ical.Recurrence.html#26" title="Go to source code"><var>$count</var></a>
+		</td>
+		<td class="value"><code></code></td>
+		<td class="description"><div>
+			<a href="#$count" class="anchor">#</a>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+			</div>
+		</div></td>
+	</tr>
+	<tr data-order="interval" id="$interval">
+		<td class="attributes"><code>
+			protected  
+			mixed
+		</code></td>
+
+		<td class="name">
+				<a href="source-class-intouch.ical.Recurrence.html#28" title="Go to source code"><var>$interval</var></a>
+		</td>
+		<td class="value"><code></code></td>
+		<td class="description"><div>
+			<a href="#$interval" class="anchor">#</a>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+			</div>
+		</div></td>
+	</tr>
+	<tr data-order="bysecond" id="$bysecond">
+		<td class="attributes"><code>
+			protected  
+			mixed
+		</code></td>
+
+		<td class="name">
+				<a href="source-class-intouch.ical.Recurrence.html#29" title="Go to source code"><var>$bysecond</var></a>
+		</td>
+		<td class="value"><code></code></td>
+		<td class="description"><div>
+			<a href="#$bysecond" class="anchor">#</a>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+			</div>
+		</div></td>
+	</tr>
+	<tr data-order="byminute" id="$byminute">
+		<td class="attributes"><code>
+			protected  
+			mixed
+		</code></td>
+
+		<td class="name">
+				<a href="source-class-intouch.ical.Recurrence.html#30" title="Go to source code"><var>$byminute</var></a>
+		</td>
+		<td class="value"><code></code></td>
+		<td class="description"><div>
+			<a href="#$byminute" class="anchor">#</a>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+			</div>
+		</div></td>
+	</tr>
+	<tr data-order="byhour" id="$byhour">
+		<td class="attributes"><code>
+			protected  
+			mixed
+		</code></td>
+
+		<td class="name">
+				<a href="source-class-intouch.ical.Recurrence.html#31" title="Go to source code"><var>$byhour</var></a>
+		</td>
+		<td class="value"><code></code></td>
+		<td class="description"><div>
+			<a href="#$byhour" class="anchor">#</a>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+			</div>
+		</div></td>
+	</tr>
+	<tr data-order="byday" id="$byday">
+		<td class="attributes"><code>
+			protected  
+			mixed
+		</code></td>
+
+		<td class="name">
+				<a href="source-class-intouch.ical.Recurrence.html#32" title="Go to source code"><var>$byday</var></a>
+		</td>
+		<td class="value"><code></code></td>
+		<td class="description"><div>
+			<a href="#$byday" class="anchor">#</a>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+			</div>
+		</div></td>
+	</tr>
+	<tr data-order="bymonthday" id="$bymonthday">
+		<td class="attributes"><code>
+			protected  
+			mixed
+		</code></td>
+
+		<td class="name">
+				<a href="source-class-intouch.ical.Recurrence.html#33" title="Go to source code"><var>$bymonthday</var></a>
+		</td>
+		<td class="value"><code></code></td>
+		<td class="description"><div>
+			<a href="#$bymonthday" class="anchor">#</a>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+			</div>
+		</div></td>
+	</tr>
+	<tr data-order="byyearday" id="$byyearday">
+		<td class="attributes"><code>
+			protected  
+			mixed
+		</code></td>
+
+		<td class="name">
+				<a href="source-class-intouch.ical.Recurrence.html#34" title="Go to source code"><var>$byyearday</var></a>
+		</td>
+		<td class="value"><code></code></td>
+		<td class="description"><div>
+			<a href="#$byyearday" class="anchor">#</a>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+			</div>
+		</div></td>
+	</tr>
+	<tr data-order="byweekno" id="$byweekno">
+		<td class="attributes"><code>
+			protected  
+			mixed
+		</code></td>
+
+		<td class="name">
+				<a href="source-class-intouch.ical.Recurrence.html#35" title="Go to source code"><var>$byweekno</var></a>
+		</td>
+		<td class="value"><code></code></td>
+		<td class="description"><div>
+			<a href="#$byweekno" class="anchor">#</a>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+			</div>
+		</div></td>
+	</tr>
+	<tr data-order="bymonth" id="$bymonth">
+		<td class="attributes"><code>
+			protected  
+			mixed
+		</code></td>
+
+		<td class="name">
+				<a href="source-class-intouch.ical.Recurrence.html#36" title="Go to source code"><var>$bymonth</var></a>
+		</td>
+		<td class="value"><code></code></td>
+		<td class="description"><div>
+			<a href="#$bymonth" class="anchor">#</a>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+			</div>
+		</div></td>
+	</tr>
+	<tr data-order="bysetpos" id="$bysetpos">
+		<td class="attributes"><code>
+			protected  
+			mixed
+		</code></td>
+
+		<td class="name">
+				<a href="source-class-intouch.ical.Recurrence.html#37" title="Go to source code"><var>$bysetpos</var></a>
+		</td>
+		<td class="value"><code></code></td>
+		<td class="description"><div>
+			<a href="#$bysetpos" class="anchor">#</a>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+			</div>
+		</div></td>
+	</tr>
+	<tr data-order="wkst" id="$wkst">
+		<td class="attributes"><code>
+			protected  
+			mixed
+		</code></td>
+
+		<td class="name">
+				<a href="source-class-intouch.ical.Recurrence.html#39" title="Go to source code"><var>$wkst</var></a>
+		</td>
+		<td class="value"><code></code></td>
+		<td class="description"><div>
+			<a href="#$wkst" class="anchor">#</a>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+			</div>
+		</div></td>
+	</tr>
+	<tr data-order="listProperties" id="$listProperties">
+		<td class="attributes"><code>
+			protected  
+			array
+		</code></td>
+
+		<td class="name">
+				<a href="source-class-intouch.ical.Recurrence.html#41-48" title="Go to source code"><var>$listProperties</var></a>
+		</td>
+		<td class="value"><code><span class="php-keyword1">array</span>(
+	<span class="php-quote">'bysecond'</span>, <span class="php-quote">'byminute'</span>, <span class="php-quote">'byhour'</span>, <span class="php-quote">'byday'</span>, <span class="php-quote">'bymonthday'</span>,
+	<span class="php-quote">'byyearday'</span>, <span class="php-quote">'byweekno'</span>, <span class="php-quote">'bymonth'</span>, <span class="php-quote">'bysetpos'</span>
+)</code></td>
+		<td class="description"><div>
+			<a href="#$listProperties" class="anchor">#</a>
+
+			<div class="description short">
+				
+<p>A list of the properties that can have comma-separated lists for values.</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>A list of the properties that can have comma-separated lists for values.</p>
+
+
+			</div>
+		</div></td>
+	</tr>
+	</table>
+
+
+
+
+
+
+</div>
+
+	<div id="footer">
+		intouch-iCalendar API documentation generated by <a href="http://apigen.org">ApiGen 2.8.0</a>
+	</div>
+</div>
+</div>
+</body>
+</html>

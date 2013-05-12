@@ -1,0 +1,784 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta name="generator" content="ApiGen 2.8.0" />
+
+	<title>Class intouch\ical\Line | intouch-iCalendar</title>
+
+	<script type="text/javascript" src="resources/combined.js?2230489249"></script>
+	<script type="text/javascript" src="elementlist.js?1249410663"></script>
+	<link rel="stylesheet" type="text/css" media="all" href="resources/style.css?3505392360" />
+
+</head>
+
+<body>
+<div id="left">
+	<div id="menu">
+		<a href="index.html" title="Overview"><span>Overview</span></a>
+
+
+		<div id="groups">
+			<h3>Namespaces</h3>
+			<ul>
+				<li class="active"><a href="namespace-intouch.html">intouch<span></span></a>
+						<ul>
+				<li class="active"><a href="namespace-intouch.ical.html">ical</a>
+						</li>
+							</ul></li>
+			</ul>
+		</div>
+
+		<hr />
+
+
+		<div id="elements">
+			<h3>Classes</h3>
+			<ul>
+				<li><a href="class-intouch.ical.Duration.html">Duration</a></li>
+				<li><a href="class-intouch.ical.Factory.html">Factory</a></li>
+				<li><a href="class-intouch.ical.Freq.html">Freq</a></li>
+				<li><a href="class-intouch.ical.iCal.html">iCal</a></li>
+				<li class="active"><a href="class-intouch.ical.Line.html">Line</a></li>
+				<li><a href="class-intouch.ical.Parser.html">Parser</a></li>
+				<li><a href="class-intouch.ical.Query.html">Query</a></li>
+				<li><a href="class-intouch.ical.Recurrence.html">Recurrence</a></li>
+				<li><a href="class-intouch.ical.VCalendar.html">VCalendar</a></li>
+				<li><a href="class-intouch.ical.VEvent.html">VEvent</a></li>
+				<li><a href="class-intouch.ical.VTimeZone.html">VTimeZone</a></li>
+			</ul>
+
+
+
+
+
+		</div>
+	</div>
+</div>
+
+<div id="splitter"></div>
+
+<div id="right">
+<div id="rightInner">
+	<form id="search">
+		<input type="hidden" name="cx" value="" />
+		<input type="hidden" name="ie" value="UTF-8" />
+		<input type="text" name="q" class="text" />
+		<input type="submit" value="Search" />
+	</form>
+
+	<div id="navigation">
+		<ul>
+			<li>
+				<a href="index.html" title="Overview"><span>Overview</span></a>
+			</li>
+			<li>
+				<a href="namespace-intouch.ical.html" title="Summary of intouch\ical"><span>Namespace</span></a>
+			</li>
+			<li class="active">
+<span>Class</span>			</li>
+		</ul>
+		<ul>
+			<li>
+				<a href="tree.html" title="Tree view of classes, interfaces, traits and exceptions"><span>Tree</span></a>
+			</li>
+		</ul>
+		<ul>
+		</ul>
+	</div>
+
+<div id="content" class="class">
+	<h1>Class Line</h1>
+
+
+	<div class="description">
+	
+<p>A class for storing a single (complete) line of the iCal file. Will find the
+line-type, the arguments and the data of the file and store them.</p>
+
+<p>The line-type can be found by querying getIdent(), data via either getData()
+or typecasting to a string. Params can be access via the ArrayAccess. A iterator
+is also avilable to iterator over the params.</p>
+
+	</div>
+
+	<dl class="tree">
+		<dd style="padding-left:0px">
+<b><span>intouch\ical\Line</span></b>			
+			 implements 
+<span>ArrayAccess</span>, 
+			
+<span>Countable</span>, 
+			
+<span>IteratorAggregate</span>
+			
+			
+		</dd>
+	</dl>
+
+
+
+
+
+
+
+
+	<div class="info">
+		
+		
+		<b>Namespace:</b> <a href="namespace-intouch.html">intouch</a>\<a href="namespace-intouch.ical.html">ical</a><br />
+		
+
+				<b>License:</b>
+				<a href="http://creativecommons.org/licenses/by-sa/2.5/dk/deed.en_GB">CC-BY-SA-DK</a><br />
+				<b>Author:</b>
+				Morten Fangel (C) 2008<br />
+				<b>Author:</b>
+				Michael Kahn (C) 2013<br />
+		<b>Located at</b> <a href="source-class-intouch.ical.Line.html#9-171" title="Go to source code">ical/Line.php</a><br />
+	</div>
+
+
+
+	<table class="summary" id="methods">
+	<caption>Methods summary</caption>
+	<tr data-order="__construct" id="___construct">
+
+		<td class="attributes"><code>
+			 public 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#___construct">#</a>
+		<code><a href="source-class-intouch.ical.Line.html#30-50" title="Go to source code">__construct</a>( <span>mixed <var>$line</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Constructs a new line.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Constructs a new line.</p>
+
+
+
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="isBegin" id="_isBegin">
+
+		<td class="attributes"><code>
+			 public 
+			boolean
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_isBegin">#</a>
+		<code><a href="source-class-intouch.ical.Line.html#52-58" title="Go to source code">isBegin</a>( )</code>
+
+		<div class="description short">
+			
+<p>Is this line the begining of a new block?</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Is this line the begining of a new block?</p>
+
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>boolean</code><br />
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="isEnd" id="_isEnd">
+
+		<td class="attributes"><code>
+			 public 
+			boolean
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_isEnd">#</a>
+		<code><a href="source-class-intouch.ical.Line.html#60-66" title="Go to source code">isEnd</a>( )</code>
+
+		<div class="description short">
+			
+<p>Is this line the end of a block?</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Is this line the end of a block?</p>
+
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>boolean</code><br />
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="getIdent" id="_getIdent">
+
+		<td class="attributes"><code>
+			 public 
+			string
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_getIdent">#</a>
+		<code><a href="source-class-intouch.ical.Line.html#68-74" title="Go to source code">getIdent</a>( )</code>
+
+		<div class="description short">
+			
+<p>Returns the line-type (ident) of the line</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Returns the line-type (ident) of the line</p>
+
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>string</code><br />
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="getData" id="_getData">
+
+		<td class="attributes"><code>
+			 public 
+			string
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_getData">#</a>
+		<code><a href="source-class-intouch.ical.Line.html#76-82" title="Go to source code">getData</a>( )</code>
+
+		<div class="description short">
+			
+<p>Returns the content of the line</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Returns the content of the line</p>
+
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>string</code><br />
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="getDataAsArray" id="_getDataAsArray">
+
+		<td class="attributes"><code>
+			 public 
+			string
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_getDataAsArray">#</a>
+		<code><a href="source-class-intouch.ical.Line.html#84-94" title="Go to source code">getDataAsArray</a>( )</code>
+
+		<div class="description short">
+			
+<p>Returns the content of the line</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Returns the content of the line</p>
+
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>string</code><br />
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="Remove_Line" id="_Remove_Line">
+
+		<td class="attributes"><code>
+			 public static
+			array
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_Remove_Line">#</a>
+		<code><a href="source-class-intouch.ical.Line.html#96-115" title="Go to source code">Remove_Line</a>( <span><code><a href="class-intouch.ical.Line.html">intouch\ical\Line</a>[]</code> <var>$arr</var></span> )</code>
+
+		<div class="description short">
+			
+<p>A static helper to get a array of intouch\ical\Line's, and calls getData() on
+each of them to lay the data "bare"..</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>A static helper to get a array of intouch\ical\Line's, and calls getData() on
+each of them to lay the data "bare"..</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$arr</var></dt>
+					<dd><code><code><a href="class-intouch.ical.Line.html">intouch\ical\Line</a>[]</code></code></dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>array</code><br />
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="offsetExists" id="_offsetExists">
+
+		<td class="attributes"><code>
+			 public 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_offsetExists">#</a>
+		<code><a href="source-class-intouch.ical.Line.html#117-122" title="Go to source code">offsetExists</a>( <span>mixed <var>$param</var></span> )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+
+
+
+				<h4>See</h4>
+				<div class="list">
+						ArrayAccess.offsetExists<br />
+				</div>
+
+
+				<h4>Implementation of</h4>
+				<div class="list"><code>ArrayAccess::offsetExists()</code></div>
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="offsetGet" id="_offsetGet">
+
+		<td class="attributes"><code>
+			 public 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_offsetGet">#</a>
+		<code><a href="source-class-intouch.ical.Line.html#124-132" title="Go to source code">offsetGet</a>( <span>mixed <var>$param</var></span> )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+
+
+
+				<h4>See</h4>
+				<div class="list">
+						ArrayAccess.offsetGet<br />
+				</div>
+
+
+				<h4>Implementation of</h4>
+				<div class="list"><code>ArrayAccess::offsetGet()</code></div>
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="offsetSet" id="_offsetSet">
+
+		<td class="attributes"><code>
+			 public 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_offsetSet">#</a>
+		<code><a href="source-class-intouch.ical.Line.html#134-140" title="Go to source code">offsetSet</a>( <span>mixed <var>$param</var></span>, <span>mixed <var>$val</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Disabled ArrayAccess requirement</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Disabled ArrayAccess requirement</p>
+
+
+
+
+
+
+				<h4>See</h4>
+				<div class="list">
+						ArrayAccess.offsetSet<br />
+				</div>
+
+
+				<h4>Implementation of</h4>
+				<div class="list"><code>ArrayAccess::offsetSet()</code></div>
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="offsetUnset" id="_offsetUnset">
+
+		<td class="attributes"><code>
+			 public 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_offsetUnset">#</a>
+		<code><a href="source-class-intouch.ical.Line.html#142-148" title="Go to source code">offsetUnset</a>( <span>mixed <var>$param</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Disabled ArrayAccess requirement</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Disabled ArrayAccess requirement</p>
+
+
+
+
+
+
+				<h4>See</h4>
+				<div class="list">
+						ArrayAccess.offsetUnset<br />
+				</div>
+
+
+				<h4>Implementation of</h4>
+				<div class="list"><code>ArrayAccess::offsetUnset()</code></div>
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="__toString" id="___toString">
+
+		<td class="attributes"><code>
+			 public 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#___toString">#</a>
+		<code><a href="source-class-intouch.ical.Line.html#150-156" title="Go to source code">__toString</a>( )</code>
+
+		<div class="description short">
+			
+<p>toString method.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>toString method.</p>
+
+
+
+
+
+
+				<h4>See</h4>
+				<div class="list">
+						<code><code><a href="class-intouch.ical.Line.html#_getData">intouch\ical\Line::getData()</a></code></code><br />
+				</div>
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="count" id="_count">
+
+		<td class="attributes"><code>
+			 public 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_count">#</a>
+		<code><a href="source-class-intouch.ical.Line.html#158-163" title="Go to source code">count</a>( )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+
+
+
+				<h4>See</h4>
+				<div class="list">
+						Countable.count<br />
+				</div>
+
+
+				<h4>Implementation of</h4>
+				<div class="list"><code>Countable::count()</code></div>
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="getIterator" id="_getIterator">
+
+		<td class="attributes"><code>
+			 public 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_getIterator">#</a>
+		<code><a href="source-class-intouch.ical.Line.html#165-170" title="Go to source code">getIterator</a>( )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+
+
+
+				<h4>See</h4>
+				<div class="list">
+						IteratorAggregate.getIterator<br />
+				</div>
+
+
+				<h4>Implementation of</h4>
+				<div class="list"><code>IteratorAggregate::getIterator()</code></div>
+		</div>
+		</div></td>
+	</tr>
+	</table>
+
+
+
+
+
+
+
+
+
+
+
+
+	<table class="summary" id="properties">
+	<caption>Properties summary</caption>
+	<tr data-order="ident" id="$ident">
+		<td class="attributes"><code>
+			protected  
+			mixed
+		</code></td>
+
+		<td class="name">
+				<a href="source-class-intouch.ical.Line.html#24" title="Go to source code"><var>$ident</var></a>
+		</td>
+		<td class="value"><code></code></td>
+		<td class="description"><div>
+			<a href="#$ident" class="anchor">#</a>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+			</div>
+		</div></td>
+	</tr>
+	<tr data-order="data" id="$data">
+		<td class="attributes"><code>
+			protected  
+			mixed
+		</code></td>
+
+		<td class="name">
+				<a href="source-class-intouch.ical.Line.html#25" title="Go to source code"><var>$data</var></a>
+		</td>
+		<td class="value"><code></code></td>
+		<td class="description"><div>
+			<a href="#$data" class="anchor">#</a>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+			</div>
+		</div></td>
+	</tr>
+	<tr data-order="params" id="$params">
+		<td class="attributes"><code>
+			protected  
+			array
+		</code></td>
+
+		<td class="name">
+				<a href="source-class-intouch.ical.Line.html#26" title="Go to source code"><var>$params</var></a>
+		</td>
+		<td class="value"><code><span class="php-keyword1">array</span>()</code></td>
+		<td class="description"><div>
+			<a href="#$params" class="anchor">#</a>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+			</div>
+		</div></td>
+	</tr>
+	<tr data-order="replacements" id="$replacements">
+		<td class="attributes"><code>
+			protected  
+			array
+		</code></td>
+
+		<td class="name">
+				<a href="source-class-intouch.ical.Line.html#28" title="Go to source code"><var>$replacements</var></a>
+		</td>
+		<td class="value"><code><span class="php-keyword1">array</span>(<span class="php-quote">'from'</span>=&gt;<span class="php-keyword1">array</span>(<span class="php-quote">'\\,'</span>, <span class="php-quote">'\\n'</span>, <span class="php-quote">'\\;'</span>, <span class="php-quote">'\\:'</span>, <span class="php-quote">'\\&quot;'</span>), <span class="php-quote">'to'</span>=&gt;<span class="php-keyword1">array</span>(<span class="php-quote">','</span>, <span class="php-quote">&quot;\n&quot;</span>, <span class="php-quote">';'</span>, <span class="php-quote">':'</span>, <span class="php-quote">'&quot;'</span>))</code></td>
+		<td class="description"><div>
+			<a href="#$replacements" class="anchor">#</a>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+			</div>
+		</div></td>
+	</tr>
+	</table>
+
+
+
+
+
+
+</div>
+
+	<div id="footer">
+		intouch-iCalendar API documentation generated by <a href="http://apigen.org">ApiGen 2.8.0</a>
+	</div>
+</div>
+</div>
+</body>
+</html>

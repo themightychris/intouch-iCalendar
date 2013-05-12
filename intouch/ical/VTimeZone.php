@@ -6,9 +6,8 @@ namespace intouch\ical;
  * The wrapper for vtimezones. Stores the timezone-id and the setup for
  * daylight savings and standard time.
  *
- * @package intouch\ical
  * @author Morten Fangel (C) 2008
- * @author Michael Kahn 2013
+ * @author Michael Kahn (C) 2013
  * @license http://creativecommons.org/licenses/by-sa/2.5/dk/deed.en_GB CC-BY-SA-DK
  */
 class VTimeZone {

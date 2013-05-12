@@ -12,9 +12,8 @@ use \DateTime;
  * information on the recurrence rules themselves.  Page 116 and onward contains
  * some great examples which were often used for testing.
  *
- * @package intouch\ical
  * @author Steven Oxley
- * @author Michael Kahn 2013
+ * @author Michael Kahn (C) 2013
  * @license http://creativecommons.org/licenses/by-sa/2.5/dk/deed.en_GB CC-BY-SA-DK
  */
 class Recurrence {
