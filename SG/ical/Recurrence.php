@@ -2,6 +2,8 @@
 
 namespace sg\ical;
 
+use \DateTime;
+
 /**
  * A wrapper for recurrence rules in iCalendar.  Parses the given line and puts the
  * recurrence rules in the correct field of this object.

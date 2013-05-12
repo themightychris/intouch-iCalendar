@@ -8,7 +8,7 @@ use sg\ical\Query;
 function dump_t($x) {
 	echo "<pre>".print_r($x,true)."</pre>";
 }
-$ICS = "exdate.ics";
+$ICS = "Canada-Holidays.ics";
 //echo dump_t(file_get_contents($ICS));
 
 $ical = new iCal($ICS);
@@ -96,8 +96,8 @@ $events = "events:".json_encode($data).',';
                 right: 'month,agendaWeek,agendaDay'
             },
 
-            year: 2010,
-            month: 9-1,
+            year: (new Date()).getFullYear(),
+            month: (new Date()).getMonth(),
 
             // US Holidays
             //events: $.fullCalendar.gcalFeed('http://www.google.com/calendar/feeds/usa__en%40holiday.calendar.google.com/public/basic'),
