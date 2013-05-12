@@ -13,7 +13,7 @@ require_once __DIR__ . '/VCalendar.php';
 require_once __DIR__ . '/VEvent.php';
 require_once __DIR__ . '/VTimeZone.php';
 
-define('SG_ICALREADER_VERSION', '0.7.0');
+define('SG_ICALREADER_VERSION', '0.8.0');
 
 /**
  * A simple iCal parser. Should take care of most stuff for ya

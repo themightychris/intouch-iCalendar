@@ -59,46 +59,7 @@ $events = "events:".json_encode($data).',';
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 <title>Fullcalendar iCal Loader</title>
 <link rel="stylesheet" type="text/css" href="fullcalendar.css">
-<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.3/jquery.min.js"></script>
-<script type="text/javascript" src="fullcalendar.js"></script>
-<script type="text/javascript">
 
-	$(document).ready(function() {
-
-		$('#calendar').fullCalendar({
-			header: {
-				left: 'prev,next today',
-				center: 'title',
-				right: 'month,agendaWeek,agendaDay'
-			},
-
-			year: 2010,
-			month: 9-1,
-
-			// US Holidays
-			//events: $.fullCalendar.gcalFeed('http://www.google.com/calendar/feeds/usa__en%40holiday.calendar.google.com/public/basic'),
-
-			<?=$events ?>
-
-			eventClick: function(event) {
-				// opens events in a popup window
-				window.open(event.url, 'gcalevent', 'width=700,height=600');
-				return false;
-			},
-
-			loading: function(bool) {
-				if (bool) {
-					$('#loading').show();
-				}else{
-					$('#loading').hide();
-				}
-			}
-
-		});
-
-	});
-
-</script>
 <style type='text/css'>
 	body div {
 		text-align: center;
@@ -121,5 +82,46 @@ $events = "events:".json_encode($data).',';
 <body>
 <div id="loading" style="display:none;">loading...</div>
 <div id="calendar"></div>
+<!-- This is the last version of jQuery that seems to work with fullcalendar.js -->
+<script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+<script type="text/javascript" src="fullcalendar.js"></script>
+<script type="text/javascript">
+
+    $(document).ready(function() {
+
+        $('#calendar').fullCalendar({
+            header: {
+                left: 'prev,next today',
+                center: 'title',
+                right: 'month,agendaWeek,agendaDay'
+            },
+
+            year: 2010,
+            month: 9-1,
+
+            // US Holidays
+            //events: $.fullCalendar.gcalFeed('http://www.google.com/calendar/feeds/usa__en%40holiday.calendar.google.com/public/basic'),
+
+            <?=$events ?>
+
+            eventClick: function(event) {
+                // opens events in a popup window
+                window.open(event.url, 'gcalevent', 'width=700,height=600');
+                return false;
+            },
+
+            loading: function(bool) {
+                if (bool) {
+                    $('#loading').show();
+                }else{
+                    $('#loading').hide();
+                }
+            }
+
+        });
+
+    });
+
+</script>
 </body>
 </html>
