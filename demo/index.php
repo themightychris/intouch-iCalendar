@@ -2,8 +2,8 @@
 
 require_once('../intouch/ical/iCal.php');
 
-use sg\ical\iCal;
-use sg\ical\Query;
+use intouch\ical\iCal;
+use intouch\ical\Query;
 
 function dump_t($x) {
 	echo "<pre>".print_r($x,true)."</pre>";

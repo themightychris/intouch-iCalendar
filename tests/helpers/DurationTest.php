@@ -14,21 +14,21 @@ class DurationTest extends PHPUnit_Framework_TestCase {
 	public function testDurationDateTime() {
 
 		//A duration of 10 days, 6 hours and 20 seconds
-		$dur = new sg\ical\Duration('P10DT6H0M20S');
+		$dur = new intouch\ical\Duration('P10DT6H0M20S');
 		$this->assertEquals($this->secsDay*10 + $this->secsHour*6 + 20, $dur->getDuration() );
 	}
 
 	public function testDurationWeek() {
 
 		//A duration of 2 weeks
-		$dur = new sg\ical\Duration('P2W');
+		$dur = new intouch\ical\Duration('P2W');
 		$this->assertEquals($this->secsWeek * 2, $dur->getDuration() );
 	}
 
 	public function testDurationNegative() {
 
 		//A duration of -1 day
-		$dur = new sg\ical\Duration('-P1D');
+		$dur = new intouch\ical\Duration('-P1D');
 		$this->assertEquals(-1 * $this->secsDay, $dur->getDuration() );
 	}
 
