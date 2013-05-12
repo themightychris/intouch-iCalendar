@@ -62,7 +62,7 @@ $events = "events:".json_encode($data).',';
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 <title>Fullcalendar iCal Loader</title>
-<link rel="stylesheet" type="text/css" href="fullcalendar.css">
+<link rel="stylesheet" type="text/css" href="//arshaw.com/js/fullcalendar-1.6.1/fullcalendar/fullcalendar.css">
 
 <style type='text/css'>
 	body div {
@@ -87,8 +87,8 @@ $events = "events:".json_encode($data).',';
 <div id="loading" style="display:none;">loading...</div>
 <div id="calendar"></div>
 <!-- This is the last version of jQuery that seems to work with fullcalendar.js -->
-<script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
-<script type="text/javascript" src="fullcalendar.js"></script>
+<script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+<script type="text/javascript" src="//arshaw.com/js/fullcalendar-1.6.1/fullcalendar/fullcalendar.min.js"></script>
 <script type="text/javascript">
 
     $(document).ready(function() {
