@@ -2,6 +2,14 @@
 
 namespace sg\ical;
 
+/**
+ * Class Parser
+ * @package sg\ical
+ *
+ * @author Morten Fangel (C) 2008
+ * @author Michael Kahn 2013
+ * @license http://creativecommons.org/licenses/by-sa/2.5/dk/deed.en_GB CC-BY-SA-DK
+ */
 class Parser {
 	/**
 	 * Fetches $url and passes it on to be parsed

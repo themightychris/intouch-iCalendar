@@ -12,6 +12,7 @@ namespace sg\ical;
  *
  * @package sg\ical
  * @author Steven Oxley
+ * @author Michael Kahn 2013
  * @license http://creativecommons.org/licenses/by-sa/2.5/dk/deed.en_GB CC-BY-SA-DK
  */
 class Recurrence {
