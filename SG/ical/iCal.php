@@ -17,6 +17,8 @@ define('SG_ICALREADER_VERSION', '0.8.0');
 
 /**
  * A simple iCal parser. Should take care of most stuff for ya
+ *
+ * http://github.com/mfkahn/SG-iCalendar based on
  * http://github.com/fangel/SG-iCalendar
  *
  * Roadmap:
