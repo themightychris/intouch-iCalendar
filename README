@@ -2,11 +2,20 @@ A simple and fast iCal parser.
 -------------------------------------------------------------------------------
 
 This library is based on http://github.com/fangel/SG-iCalendar but
-updated for PHP 5.3+ namespaces.
+updated for PHP 5.3+ namespaces.  The re-organization is different enough
+that I renamed the top-level namespace to intouch from SG, but so far
+nothing was changed code-wise from the original fork, except:
+
+- namespaced class names replace original ones
+- build.cmd and build.sh removed, assume a PSR-0 style autoload env
+- composer.json added
+- demo updated to fetch jquery, fullcalendar and an up to date ICS file from
+  the network
 
 -------------------------------------------------------------------------------
 
 A simple example :
+
  use intouch\ical\iCal;
  $ical = new iCal( "./basic.ics" );
  //or
@@ -18,6 +27,7 @@ A simple example :
 To check unit tests with phpunit, goto tests/ directory and :
  phpunit AllTests
  phpunit helpers/FreqTest
+ ./test.sh
 
 -------------------------------------------------------------------------------
 CHANGELOG :
@@ -41,6 +51,8 @@ current (12 may 2013)
 -------------------------------------------------------------------------------
 TODO :
 -------------------------------------------------------------------------------
+
+(this is from the original repo, now on my TODO ...)
 
 These iCal keywords are not supported for the moment :
  - RECURRENCE-ID : to move one event from a recurrence
