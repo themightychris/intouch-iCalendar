@@ -8,7 +8,11 @@ use sg\ical\Query;
 function dump_t($x) {
 	echo "<pre>".print_r($x,true)."</pre>";
 }
-$ICS = "Canada-Holidays.ics";
+
+//local
+//$ICS = "Canada-Holidays.ics";
+$ICS = "http://files.apple.com/calendars/Canadian32Holidays.ics";
+
 //echo dump_t(file_get_contents($ICS));
 
 $ical = new iCal($ICS);
