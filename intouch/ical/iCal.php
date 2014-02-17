@@ -2,18 +2,6 @@
 
 namespace intouch\ical;
 
-require_once __DIR__ . '/Factory.php';
-require_once __DIR__ . '/Duration.php';
-require_once __DIR__ . '/Freq.php';
-require_once __DIR__ . '/Line.php';
-require_once __DIR__ . '/Parser.php';
-require_once __DIR__ . '/Query.php';
-require_once __DIR__ . '/Recurrence.php';
-require_once __DIR__ . '/VCalendar.php';
-require_once __DIR__ . '/VEvent.php';
-require_once __DIR__ . '/VTimeZone.php';
-
-define('SG_ICALREADER_VERSION', '0.8.0');
 
 /**
  * A simple iCal parser.
